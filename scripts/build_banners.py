@@ -246,7 +246,7 @@ def iphone_rows(pid, color_desc, bg2, bg5, btn5, t5_head, meta):
     vis = f"the {name} in {col} ({color_desc}), a {body}, identical to reference Image 1"
     cam_word = "Triple cámara" if pro else "Doble cámara"
     precio = p["precio"]
-    precio_lc = precio[0].lower() + precio[1:]
+    precio_lc = "desde" + precio[len("Desde"):] if precio.startswith("Desde") else precio
     caps = p["capacidades"]
     caps_txt = caps[0] if len(caps) == 1 else ", ".join(caps[:-1]) + " o " + caps[-1]
     r_par = (p["refs"]["par"], f"the {name} in {col}, front and back (product identity)")

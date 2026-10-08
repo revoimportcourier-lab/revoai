@@ -229,7 +229,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/apple/iphone-18-pro-max/guinda/guinda-1.webp>, <https://revoimport.com/assets/revo/accessories/case-iphone.webp>, <https://revoimport.com/assets/revo/accessories/mica-iphone.webp>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: ¿TOCA CAMBIAR · DE IPHONE? · iPhone 18 Pro Max nuevo y sellado, s/ 6,550 · PIDE HOY · CONTRAENTREGA EN LIMA
+Textos exactos en la imagen: ¿TOCA CAMBIAR · DE IPHONE? · iPhone 18 Pro Max nuevo y sellado, S/ 6,550 · PIDE HOY · CONTRAENTREGA EN LIMA
 
 **Prompt master 3:4 (Feed)**
 
@@ -246,7 +246,7 @@ Soft diffused studio lighting, gentle soft shadows under each object, realistic 
 
 Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Top, centered, large all-caps headline in two lines: "¿TOCA CAMBIAR" / "DE IPHONE?"
-- Below it, a smaller sentence-case subline: "iPhone 18 Pro Max nuevo y sellado, s/ 6,550"
+- Below it, a smaller sentence-case subline: "iPhone 18 Pro Max nuevo y sellado, S/ 6,550"
 - Bottom center: a white rounded-rectangle button with navy bold all-caps text "PIDE HOY"
 - Under the button, small white all-caps text: "CONTRAENTREGA EN LIMA"
 
@@ -262,7 +262,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "¿TOCA CAMBIAR"; "DE IPHONE?"; "iPhone 18 Pro Max nuevo y sellado, s/ 6,550"; "PIDE HOY"; "CONTRAENTREGA EN LIMA". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "¿TOCA CAMBIAR"; "DE IPHONE?"; "iPhone 18 Pro Max nuevo y sellado, S/ 6,550"; "PIDE HOY"; "CONTRAENTREGA EN LIMA". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -272,7 +272,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "¿TOCA CAMBIAR"; "DE IPHONE?"; "iPhone 18 Pro Max nuevo y sellado, s/ 6,550"; "PIDE HOY"; "CONTRAENTREGA EN LIMA". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "¿TOCA CAMBIAR"; "DE IPHONE?"; "iPhone 18 Pro Max nuevo y sellado, S/ 6,550"; "PIDE HOY"; "CONTRAENTREGA EN LIMA". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -504,7 +504,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/apple/iphone-18-pro/celeste/1.webp>, <https://revoimport.com/assets/revo/accessories/case-iphone.webp>, <https://revoimport.com/assets/revo/accessories/mica-iphone.webp>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: TU PRÓXIMO · IPHONE ESTÁ AQUÍ · iPhone 18 Pro nuevo y sellado, s/ 6,200 · PIDE HOY · CONTRAENTREGA EN LIMA
+Textos exactos en la imagen: TU PRÓXIMO · IPHONE ESTÁ AQUÍ · iPhone 18 Pro nuevo y sellado, S/ 6,200 · PIDE HOY · CONTRAENTREGA EN LIMA
 
 **Prompt master 3:4 (Feed)**
 
@@ -521,7 +521,7 @@ Soft diffused studio lighting, gentle soft shadows under each object, realistic 
 
 Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Top, centered, large all-caps headline in two lines: "TU PRÓXIMO" / "IPHONE ESTÁ AQUÍ"
-- Below it, a smaller sentence-case subline: "iPhone 18 Pro nuevo y sellado, s/ 6,200"
+- Below it, a smaller sentence-case subline: "iPhone 18 Pro nuevo y sellado, S/ 6,200"
 - Bottom center: a white rounded-rectangle button with charcoal bold all-caps text "PIDE HOY"
 - Under the button, small white all-caps text: "CONTRAENTREGA EN LIMA"
 
@@ -537,7 +537,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU PRÓXIMO"; "IPHONE ESTÁ AQUÍ"; "iPhone 18 Pro nuevo y sellado, s/ 6,200"; "PIDE HOY"; "CONTRAENTREGA EN LIMA". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU PRÓXIMO"; "IPHONE ESTÁ AQUÍ"; "iPhone 18 Pro nuevo y sellado, S/ 6,200"; "PIDE HOY"; "CONTRAENTREGA EN LIMA". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -547,7 +547,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU PRÓXIMO"; "IPHONE ESTÁ AQUÍ"; "iPhone 18 Pro nuevo y sellado, s/ 6,200"; "PIDE HOY"; "CONTRAENTREGA EN LIMA". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU PRÓXIMO"; "IPHONE ESTÁ AQUÍ"; "iPhone 18 Pro nuevo y sellado, S/ 6,200"; "PIDE HOY"; "CONTRAENTREGA EN LIMA". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
