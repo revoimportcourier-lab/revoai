@@ -1,0 +1,1295 @@
+{
+  "name": "REVO · Banners Meta Ads (Claude + GPT-6 Astra + Higgsfield)",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## A · Actualizar biblioteca con Claude\nLee los productos y precios de revoimport.com. Si un producto es nuevo o cambió (precio, colores, contenido, fotos), Claude reescribe sus 5 banners y textos de Meta y los deja en la hoja con estado **pendiente**. No gasta créditos de Higgsfield.",
+        "width": 900,
+        "height": 160,
+        "color": 5
+      },
+      "id": "54e63686-24a4-528d-b4de-3c51b2b6c2c2",
+      "name": "Nota 0",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        -200
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "4551d2e2-1b44-5ea6-820d-6e24768de2e1",
+      "name": "A ▶ Actualizar biblioteca",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "weeksInterval": 1,
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 8
+            }
+          ]
+        }
+      },
+      "id": "3716a08a-0619-5c70-a6b0-13e7fc71fdd5",
+      "name": "A ⏰ Lunes 8:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Configuración del flujo A (actualizar biblioteca con Claude).\n// Pega el link de tu Google Sheet (la que creaste importando prompts/banners.csv).\nreturn [{\n  json: {\n    sheet_url: 'PEGA_AQUI_EL_LINK_DE_TU_GOOGLE_SHEET',\n    claude_model: 'claude-opus-5-5',\n    claude_effort: 'medium',\n  },\n}];\n"
+      },
+      "id": "a86d5507-4bb5-5dd4-8b49-ba159b77bf95",
+      "name": "A · Config",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "=https://revoimport.com/config.js?nocache={{ Date.now() }}",
+        "options": {
+          "timeout": 60000,
+          "response": {
+            "response": {
+              "responseFormat": "text",
+              "outputPropertyName": "data"
+            }
+          }
+        }
+      },
+      "id": "723be7b4-b774-50b7-8417-cd3e2fc0abec",
+      "name": "A · Leer config.js de la web",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        80
+      ],
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lee window.OK_CONFIG de revoimport.com/config.js y arma la ficha de cada producto.\n// La huella cambia cuando cambian nombre, precios, precio anterior, colores, contenido o fotos.\nconst SITE = 'https://revoimport.com';\nconst raw = $input.first().json.data;\n\nfunction parseConfig(text) {\n  const start = text.indexOf('window.OK_CONFIG');\n  const open = text.indexOf('{', start);\n  if (start < 0 || open < 0) throw new Error('No se encontró window.OK_CONFIG en config.js');\n  let depth = 0;\n  let quote = '';\n  let esc = false;\n  for (let i = open; i < text.length; i++) {\n    const c = text[i];\n    if (quote) {\n      if (esc) esc = false;\n      else if (c === '\\\\') esc = true;\n      else if (c === quote) quote = '';\n      continue;\n    }\n    if (c === '\"' || c === \"'\") quote = c;\n    else if (c === '{') depth++;\n    else if (c === '}' && --depth === 0) return JSON.parse(text.slice(open, i + 1));\n  }\n  throw new Error('config.js incompleto');\n}\n\nconst abs = (p) => (p ? (p.startsWith('http') ? p : `${SITE}/${p.replace(/^\\//, '')}`) : null);\nconst soles = (n) => `S/ ${Number(n).toLocaleString('en-US')}`;\nconst hash = (s) => {\n  let h = 5381;\n  for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) >>> 0;\n  return h.toString(16).padStart(8, '0');\n};\nconst uniq = (a) => [...new Set(a.filter((x) => x !== null && x !== undefined && x !== ''))];\n\nconst cfg = parseConfig(raw);\nconst promoIphone = (cfg.giftPromotions || []).find((g) => g.id === 'iphone-four');\nconst global = {\n  marca: cfg.brand,\n  whatsapp: `+${cfg.country} ${cfg.whatsapp}`,\n  pagos: cfg.payments || [],\n  envios: cfg.shipping || {},\n  regalos_iphone: promoIphone && promoIphone.enabled ? promoIphone.gifts.map((g) => g.name) : [],\n  nota_regalos: promoIphone ? promoIphone.note : '',\n};\n\nreturn (cfg.products || []).map((p) => {\n  const variants = p.variants || [];\n  const precios = uniq(variants.map((v) => v.price)).sort((a, b) => a - b);\n  const imgs = [];\n  for (const arr of Object.values(p.galleries || {})) imgs.push(...arr.slice(0, 3));\n  for (const k of ['cover', 'image']) if (p[k]) imgs.push(p[k]);\n  for (const g of p.galleryViews || []) if (g && g.src) imgs.push(g.src);\n  const ficha = {\n    id: p.id,\n    nombre: p.name,\n    categoria: p.category,\n    precio: precios.length > 1 ? `Desde ${soles(precios[0])}` : precios.length ? soles(precios[0]) : '',\n    precio_antes: p.previousPrice ? soles(p.previousPrice) : null,\n    precios,\n    capacidades: uniq(variants.map((v) => v.capacity)),\n    sim: uniq(variants.map((v) => v.sim)),\n    colores: (p.colors || []).map((c) => c.name),\n    tamano: p.size || null,\n    descripcion: p.description || '',\n    incluye: p.includes || [],\n    etiqueta: p.conditionBadge || p.sourceBadge || p.label || p.tag || null,\n    garantia: p.warranty || null,\n    original: p.genuine === undefined ? null : p.genuine,\n    nota_autenticidad: p.authenticityNote || null,\n    envio: p.deliveryOffer || null,\n    disponibilidad: uniq(variants.map((v) => v.availability)),\n    link: `${SITE}/p/${p.id}/`,\n    imagenes: uniq(imgs.map(abs)),\n    global,\n  };\n  ficha.huella = hash(JSON.stringify({\n    n: ficha.nombre, p: ficha.precios, a: ficha.precio_antes, c: ficha.colores, i: ficha.incluye, im: ficha.imagenes,\n  }));\n  return { json: ficha };\n});\n"
+      },
+      "id": "3708620d-22a8-56b7-b711-dab745154d25",
+      "name": "A · Extraer catálogo",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $('A · Config').first().json.sheet_url }}",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "banners",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "id": "7a5903d3-0866-5a50-8df5-35f0df44ac5a",
+      "name": "A · Leer hoja",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        960,
+        80
+      ],
+      "executeOnce": true,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Compara la web con la hoja: solo los productos nuevos o con huella distinta van a Claude.\nconst cfg = $('A · Config').first().json;\nconst fichas = $('A · Extraer catálogo').all().map((i) => i.json);\nconst filas = $('A · Leer hoja').all().map((i) => i.json).filter((r) => r && r.id);\n\nconst SYSTEM = \"Eres el redactor creativo y director de arte de REVO Store (revoimport.com), una tienda independiente de Lima, Perú, que vende iPhones nuevos y sellados, accesorios y combos de audífonos Pro 3 Calidad Premium. Escribes los prompts con los que Higgsfield (Marketing Studio Image 2.5 Flare) genera banners para Meta Ads, y los textos del anuncio.\\n\\nRecibes un JSON con: la ficha del producto leída hoy de revoimport.com (`producto`, con datos generales de la tienda en `producto.global`), las filas actuales de ese producto si existen (`filas_actuales`, `meta_actual`) y las plantillas a entregar (`plantillas`).\\n\\nQué devuelves (JSON según el esquema):\\n- `filas`: una por plantilla pedida (T1 a T5), con `refs` (URLs de imágenes, máximo 6), `textos_imagen` (la lista exacta de textos que aparecen en la imagen), `prompt_master_3x4`, `prompt_1x1` y `prompt_9x16`.\\n- `meta`: 3 textos principales (máximo 125 caracteres cada uno), 3 títulos (máximo 40) y 1 descripción (máximo 30), en español peruano, cercano y directo, sin floro.\\n- `notas`: en una o dos líneas, qué cambiaste y por qué.\\n\\nCómo trabajar:\\n- Si hay `filas_actuales`, consérvalas casi idénticas y cambia solo lo que cambió en la ficha (precio, precio anterior, nombre, colores, contenido del combo, fotos). No reescribas lo que sigue siendo correcto. Mantén sus `refs` salvo que una foto ya no exista en `producto.imagenes`.\\n- Si el producto es nuevo, sigue exactamente la estructura del ejemplo canónico de abajo para cada plantilla: mismo orden de párrafos, mismo nivel de detalle, y al final, palabra por palabra, el bloque \\\"Reference images...\\\", el bloque \\\"Format: vertical 3:4...\\\" y el bloque \\\"Brand-safety and text rules...\\\". Usa como `refs` solo URLs de `producto.imagenes` (todas de revoimport.com). Si una foto muestra una caja con logo de Apple, úsala solo para la forma del producto y dilo en la descripción de la referencia.\\n- Los prompts van en inglés. Todo texto que aparece en la imagen va en español peruano y entre comillas dobles. `textos_imagen` lista exactamente esas cadenas, en el mismo orden (sin los números de marcador sueltos).\\n- `prompt_1x1` y `prompt_9x16` siguen exactamente el formato de redimensión del ejemplo, con la lista exacta de textos de esa fila.\\n- Titular de máximo 6 palabras cuando se pueda (el nombre del modelo cuenta como una idea). Llamado a la acción en la imagen: \\\"PIDE HOY\\\". El botón de Meta siempre es \\\"Enviar mensaje\\\".\\n- Precios: formato \\\"S/ 1,234\\\". Si hay varios precios, \\\"Desde S/ X\\\" con el menor. Precio tachado SOLO si `producto.precio_antes` existe.\\n\\nNunca puede aparecer, ni en la imagen ni en los textos:\\n- El logo de Apple, la palabra \\\"AirPods\\\" ni marcas o logos de terceros. Equipos, cajas y cases van limpios.\\n- Decir o insinuar que los audífonos Pro 3 o Pro 2 son originales de Apple. Todo banner de combos con Pro 3 incluye la línea \\\"Audífonos compatibles, no originales de Apple.\\\"\\n- \\\"Garantía Apple\\\", \\\"distribuidor autorizado\\\", \\\"stock inmediato\\\" o \\\"entrega inmediata\\\" (todo el catálogo es por pedido), \\\"envío gratis\\\" en iPhones o accesorios sueltos (solo los combos lo tienen), devoluciones gratis, descuentos, fechas límite o escasez que la ficha no tenga.\\n- Reseñas, estrellas o testimonios inventados. La plantilla T4 lleva la tarjeta de reseña EN BLANCO para pegar después una reseña real.\\n- Especificaciones que no estén en la ficha (chip, megapíxeles, batería, materiales, medidas). Ojo: en algunos iPhone `tamano` es la capacidad, no la pantalla.\\n\\nAfirmaciones permitidas cuando la ficha las respalda: \\\"nuevo y sellado\\\" (iPhone), \\\"1 año de garantía por fallas de fábrica\\\" (iPhone; es garantía de REVO), \\\"video de tu equipo antes de pagar\\\", \\\"contraentrega en Lima\\\", \\\"envíos a todo el Perú\\\", los regalos de `producto.global.regalos_iphone` (con la nota \\\"Regalos sujetos a disponibilidad.\\\"), \\\"envío gratis a todo el Perú\\\" (solo combos con `envio.freeShipping`), \\\"pagas al recibir\\\" (solo si `envio.cod` es true), \\\"cubo original de 20 W\\\" (combos), \\\"original\\\" (solo si `etiqueta` u `original` lo dicen).\\n\\nEjemplo canónico (iPhone 17 Pro Max: plantillas T1 a T5 y la redimensión de T1):\\n<ejemplo>\\n### T1 · Diagrama de partes (callouts numerados)\\nrefs: [\\\"https://revoimport.com/assets/apple/iphone-17-pro-max/orange/1-orange.webp\\\", \\\"https://revoimport.com/assets/apple/iphone-17-pro-max/orange/3-orange.webp\\\", \\\"https://revoimport.com/assets/revo/accessories/case-iphone.webp\\\", \\\"https://revoimport.com/assets/revo/accessories/mica-iphone.webp\\\", \\\"https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp\\\"]\\ntextos_imagen: [\\\"TU IPHONE 17 PRO MAX, NUEVO Y SELLADO\\\", \\\"1  Triple cámara.\\\", \\\"2  Pantalla de 6.9 pulgadas.\\\", \\\"3  Nuevo y sellado.\\\", \\\"4  Case de regalo.\\\", \\\"5  Mica de regalo.\\\", \\\"6  Cable compatible de regalo.\\\", \\\"Desde S/ 4,600\\\", \\\"PIDE HOY\\\", \\\"+ Audífonos Pro 2 de regalo. Regalos sujetos a disponibilidad.\\\"]\\nprompt_master_3x4:\\nVertical 3:4 product feature infographic ad, clean minimalist layout on a pure white background with bold black sans-serif typography (Helvetica Neue Bold / Neue Haas Grotesk style). All on-image copy is in Spanish (Peru).\\n\\nTop, centered: bold black all-caps headline in one line \\\"TU IPHONE 17 PRO MAX, NUEVO Y SELLADO\\\"\\n\\nUpper panel: a large rounded-corner light cool-gray card. Inside, a studio product shot of the iPhone 17 Pro Max in Naranja (bright cosmic orange), a flat-edged smartphone with a full-width rear camera plateau holding three large lenses, a flash and a sensor, identical to reference Image 1, in 3/4 rear view showing the camera, with a second unit partly visible behind it showing the screen, positioned on the right and slightly cropped by the right edge, soft shadow beneath. Small white circular numbered markers with thin black outlines placed on the product: \\\"1\\\" on the camera, \\\"2\\\" on the screen of the second unit. On the left, matching markers with bold black text: \\\"1  Triple cámara.\\\" and \\\"2  Pantalla de 6.9 pulgadas.\\\"\\n\\nLower panel: a second rounded light-gray card. On the left, a top-down view of the same phone lying screen-down next to its gifts: the clear transparent case (Image 3), the tempered-glass screen protector (Image 4) and the neatly coiled white USB-C cable (Image 5). Numbered markers on it: \\\"3\\\" on the phone, \\\"4\\\" on the case, \\\"5\\\" on the screen protector, \\\"6\\\" on the cable. On the right, a vertical list with markers and bold black text: \\\"3  Nuevo y sellado.\\\", \\\"4  Case de regalo.\\\", \\\"5  Mica de regalo.\\\", \\\"6  Cable compatible de regalo.\\\"\\n\\nAbove the button, centered: large bold black price text \\\"Desde S/ 4,600\\\"\\nBottom: a full-width black rounded-rectangle button with bold white all-caps text \\\"PIDE HOY\\\"\\nUnder the button, one line of small gray text: \\\"+ Audífonos Pro 2 de regalo. Regalos sujetos a disponibilidad.\\\"\\n\\nSoft diffused studio lighting, realistic materials and reflections, sharp e-commerce product photography, clean technical infographic aesthetic.\\n\\nReference images, in order: Image 1 — the iPhone 17 Pro Max in Naranja, front and back (product identity); Image 2 — close-up of the iPhone 17 Pro Max camera area; Image 3 — the clear transparent gift case; Image 4 — the tempered-glass gift screen protector; Image 5 — the white USB-C gift cable. Use the references only for the exact shape, proportions, color and visible details of each product and keep them identical: do not invent or remove lenses, ports, buttons, prongs, cables or accessories. Ignore and never reproduce any logo, sticker, packaging or printed text visible in the references.\\n\\nFormat: vertical 3:4 for Facebook and Instagram Feed. Keep the headline, every label, the price and the button inside the central 4:5 area (leave at least 4% of plain background at the very top and bottom) with at least 6% side margins, so nothing is lost when the feed crops the image to 4:5.\\n\\nBrand-safety and text rules: do not show the Apple logo, the word AirPods or any other brand logo, trademark, sticker or printed label on devices, boxes, cases, cables or screens; device backs, props and accessories stay clean and unbranded. Any visible phone screen shows only an abstract dark wallpaper with no icons, apps or text. No people, no hands, no watermarks, no QR codes and no words other than the exact quoted strings above. Spell every Spanish word exactly as written, keeping accents (á, é, í, ó, ú), ñ, ¿ and ×; currency is always written S/ followed by a space.\\n\\n### T2 · Flat lay con 3 llamadas\\nrefs: [\\\"https://revoimport.com/assets/apple/iphone-17-pro-max/orange/1-orange.webp\\\", \\\"https://revoimport.com/assets/revo/accessories/case-iphone.webp\\\", \\\"https://revoimport.com/assets/revo/accessories/mica-iphone.webp\\\", \\\"https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp\\\"]\\ntextos_imagen: [\\\"TU IPHONE 17 PRO MAX\\\", \\\"VIENE ACOMPAÑADO\\\", \\\"nuevo y sellado.\\\", \\\"case, mica y cable de regalo.\\\", \\\"video de tu equipo antes de pagar.\\\", \\\"Desde S/ 4,600\\\", \\\"PIDE HOY\\\"]\\nprompt_master_3x4:\\nVertical 3:4 social media ad poster, premium minimalist product photography. Top-down flat lay of the iPhone 17 Pro Max in Naranja (bright cosmic orange), a flat-edged smartphone with a full-width rear camera plateau holding three large lenses, a flash and a sensor, identical to reference Image 1, lying screen-down diagonally, with its gifts arranged around it: the clear transparent case (Image 2), the tempered-glass screen protector (Image 3) and the coiled white USB-C cable (Image 4), on a smooth matte slate-gray / muted green-gray background. Soft diffused studio lighting from above, gentle vignette, subtle soft shadows under every object, high-end editorial look, sharp detail, realistic textures, the muted background contrasting with the product colors.\\n\\nTypography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):\\n- Top, centered, large all-caps headline in two lines: \\\"TU IPHONE 17 PRO MAX\\\" / \\\"VIENE ACOMPAÑADO\\\"\\n- Three small lowercase callout captions with thin white 1px leader lines pointing at the product: \\\"nuevo y sellado.\\\" upper left, with a line going down to the phone; \\\"case, mica y cable de regalo.\\\" upper right, with an L-shaped line pointing to the gifts; \\\"video de tu equipo antes de pagar.\\\" lower center, with a vertical line from the phone.\\n- Just above the button, centered: bold white price text \\\"Desde S/ 4,600\\\"\\n- Bottom center: a white rounded-rectangle button with gray bold all-caps text \\\"PIDE HOY\\\"\\n\\nClean layout, generous negative space, modern e-commerce ad aesthetic.\\n\\nReference images, in order: Image 1 — the iPhone 17 Pro Max in Naranja, front and back (product identity); Image 2 — the clear transparent gift case; Image 3 — the tempered-glass gift screen protector; Image 4 — the white USB-C gift cable. Use the references only for the exact shape, proportions, color and visible details of each product and keep them identical: do not invent or remove lenses, ports, buttons, prongs, cables or accessories. Ignore and never reproduce any logo, sticker, packaging or printed text visible in the references.\\n\\nFormat: vertical 3:4 for Facebook and Instagram Feed. Keep the headline, every label, the price and the button inside the central 4:5 area (leave at least 4% of plain background at the very top and bottom) with at least 6% side margins, so nothing is lost when the feed crops the image to 4:5.\\n\\nBrand-safety and text rules: do not show the Apple logo, the word AirPods or any other brand logo, trademark, sticker or printed label on devices, boxes, cases, cables or screens; device backs, props and accessories stay clean and unbranded. Any visible phone screen shows only an abstract dark wallpaper with no icons, apps or text. No people, no hands, no watermarks, no QR codes and no words other than the exact quoted strings above. Spell every Spanish word exactly as written, keeping accents (á, é, í, ó, ú), ñ, ¿ and ×; currency is always written S/ followed by a space.\\n\\n### T3 · Ficha técnica\\nrefs: [\\\"https://revoimport.com/assets/apple/iphone-17-pro-max/orange/1-orange.webp\\\", \\\"https://revoimport.com/assets/apple/iphone-17-pro-max/orange/3-orange.webp\\\", \\\"https://revoimport.com/assets/apple/iphone-17-pro-max/orange/4-orange.webp\\\"]\\ntextos_imagen: [\\\"IPHONE 17 PRO MAX.\\\", \\\"Pantalla de\\\", \\\"6.9 pulgadas\\\", \\\"256 GB a\\\", \\\"1 TB\\\", \\\"eSIM o\\\", \\\"chip físico\\\", \\\"Triple cámara\\\", \\\"Color Naranja\\\", \\\"Vista lateral\\\", \\\"Desde S/ 4,600\\\", \\\"PIDE HOY\\\"]\\nprompt_master_3x4:\\nVertical 3:4 e-commerce product spec card, clean minimalist layout on a pure white background, black typography.\\n\\nTop, centered: huge bold black all-caps sans-serif headline (Helvetica Neue Bold style) \\\"IPHONE 17 PRO MAX.\\\"\\n\\nBelow, a row of three feature icons, each a thin black outlined circle with a minimal line icon inside and two-line regular-weight black text to its right:\\n- smartphone outline icon — two lines: \\\"Pantalla de\\\" / \\\"6.9 pulgadas\\\"\\n- memory chip icon — two lines: \\\"256 GB a\\\" / \\\"1 TB\\\"\\n- SIM card icon — two lines: \\\"eSIM o\\\" / \\\"chip físico\\\"\\n\\nNext, a row of three circular close-up detail photos with thin light-gray borders, each with small bold black text curved along the top arc of the circle:\\n- \\\"Triple cámara\\\" — close-up of the rear camera (Image 2)\\n- \\\"Color Naranja\\\" — close-up of the back surface color\\n- \\\"Vista lateral\\\" — close-up of the side profile with its buttons (Image 3)\\n\\nMain area: a large studio hero shot of the iPhone 17 Pro Max in Naranja (bright cosmic orange), a flat-edged smartphone with a full-width rear camera plateau holding three large lenses, a flash and a sensor, identical to reference Image 1: two units standing upright side by side, one in front view with the screen facing the camera and one showing the back, soft natural shadow on the white background. Thin black dimension lines with round dot endpoints and black text labels: one thin diagonal line across the front screen from corner to corner labeled \\\"6.9 pulgadas\\\".\\n\\nAbove the button, centered: large bold black price text \\\"Desde S/ 4,600\\\"\\nBottom: a wide outlined button with thin black border, rounded corners, white fill and bold black all-caps text \\\"PIDE HOY\\\"\\n\\nSoft diffused studio lighting, realistic textures, sharp high-end product photography, clean technical spec-sheet aesthetic.\\n\\nReference images, in order: Image 1 — the iPhone 17 Pro Max in Naranja, front and back (product identity); Image 2 — close-up of the iPhone 17 Pro Max camera area; Image 3 — side profile of the iPhone 17 Pro Max. Use the references only for the exact shape, proportions, color and visible details of each product and keep them identical: do not invent or remove lenses, ports, buttons, prongs, cables or accessories. Ignore and never reproduce any logo, sticker, packaging or printed text visible in the references.\\n\\nFormat: vertical 3:4 for Facebook and Instagram Feed. Keep the headline, every label, the price and the button inside the central 4:5 area (leave at least 4% of plain background at the very top and bottom) with at least 6% side margins, so nothing is lost when the feed crops the image to 4:5.\\n\\nBrand-safety and text rules: do not show the Apple logo, the word AirPods or any other brand logo, trademark, sticker or printed label on devices, boxes, cases, cables or screens; device backs, props and accessories stay clean and unbranded. Any visible phone screen shows only an abstract dark wallpaper with no icons, apps or text. No people, no hands, no watermarks, no QR codes and no words other than the exact quoted strings above. Spell every Spanish word exactly as written, keeping accents (á, é, í, ó, ú), ñ, ¿ and ×; currency is always written S/ followed by a space.\\n\\n### T4 · Oferta + plantilla de reseña\\nrefs: [\\\"https://revoimport.com/assets/apple/iphone-17-pro-max/orange/1-orange.webp\\\"]\\ntextos_imagen: [\\\"4 regalos incluidos\\\", \\\"iPhone 17 Pro Max nuevo y sellado\\\", \\\"Desde S/ 4,600\\\", \\\"Contraentrega en Lima · Envíos a todo el Perú\\\"]\\nprompt_master_3x4:\\nVertical 3:4 e-commerce promo ad, clean minimalist layout on a pure white background, modern app-style UI typography (Inter / SF Pro style).\\n\\nTop left: a dark charcoal pill-shaped badge with bold white text \\\"4 regalos incluidos\\\"\\n\\nCenter: a large studio hero shot of the iPhone 17 Pro Max in Naranja (bright cosmic orange), a flat-edged smartphone with a full-width rear camera plateau holding three large lenses, a flash and a sensor, identical to reference Image 1, in 3/4 rear view, standing upright, soft natural shadow beneath, realistic materials.\\n\\nBelow the product, centered text block:\\n- bold black sentence-case title \\\"iPhone 17 Pro Max nuevo y sellado\\\"\\n- price line: \\\"Desde S/ 4,600\\\" in large bold dark navy blue\\n- regular black text \\\"Contraentrega en Lima · Envíos a todo el Perú\\\"\\n\\nBottom: a white rounded-rectangle card with a thin black outline, laid out as a customer review template: a row of five orange-yellow stars with small gray 5/5, an empty area for a quote, and below it a light-blue circular avatar plus an empty name line and an empty small gray line. Leave the quote, the avatar initials and the name completely blank for a real customer review to be added later.\\n\\nSoft diffused studio lighting, sharp high-end product photography, clean direct-response e-commerce aesthetic, generous white space.\\n\\nReference images, in order: Image 1 — the iPhone 17 Pro Max in Naranja, front and back (product identity). Use the references only for the exact shape, proportions, color and visible details of each product and keep them identical: do not invent or remove lenses, ports, buttons, prongs, cables or accessories. Ignore and never reproduce any logo, sticker, packaging or printed text visible in the references.\\n\\nFormat: vertical 3:4 for Facebook and Instagram Feed. Keep the headline, every label, the price and the button inside the central 4:5 area (leave at least 4% of plain background at the very top and bottom) with at least 6% side margins, so nothing is lost when the feed crops the image to 4:5.\\n\\nBrand-safety and text rules: do not show the Apple logo, the word AirPods or any other brand logo, trademark, sticker or printed label on devices, boxes, cases, cables or screens; device backs, props and accessories stay clean and unbranded. Any visible phone screen shows only an abstract dark wallpaper with no icons, apps or text. No people, no hands, no watermarks, no QR codes and no words other than the exact quoted strings above. Spell every Spanish word exactly as written, keeping accents (á, é, í, ó, ú), ñ, ¿ and ×; currency is always written S/ followed by a space.\\n\\n### T5 · Knolling: problema → solución\\nrefs: [\\\"https://revoimport.com/assets/apple/iphone-17-pro-max/orange/1-orange.webp\\\", \\\"https://revoimport.com/assets/revo/accessories/case-iphone.webp\\\", \\\"https://revoimport.com/assets/revo/accessories/mica-iphone.webp\\\", \\\"https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp\\\"]\\ntextos_imagen: [\\\"¿BUSCAS UN\\\", \\\"PRO MAX?\\\", \\\"iPhone 17 Pro Max nuevo y sellado, desde S/ 4,600\\\", \\\"PIDE HOY\\\", \\\"CONTRAENTREGA EN LIMA\\\"]\\nprompt_master_3x4:\\nVertical 3:4 social media ad poster, premium minimalist knolling flat lay product photography, shot directly from above. Smooth matte dusty navy-blue / slate-blue background with subtle texture. In the center, the iPhone 17 Pro Max in Naranja (bright cosmic orange), a flat-edged smartphone with a full-width rear camera plateau holding three large lenses, a flash and a sensor, identical to reference Image 1, lying screen-down.\\n\\nEveryday essentials, all generic and unbranded, arranged neatly around it in a clean grid with even spacing and right angles:\\n- Top row: the clear transparent gift case (Image 2), the tempered-glass screen protector (Image 3), the coiled white USB-C cable (Image 4).\\n- Left side: a matte insulated steel water bottle.\\n- Right side: a black hardcover notebook with an elastic band, a leather card holder.\\n- Bottom row: a set of keys on a leather keyring, black sunglasses, a small leather wallet, a ceramic coffee cup seen from above.\\n\\nSoft diffused studio lighting, gentle soft shadows under each object, realistic textures, high-end editorial e-commerce look, the bright cosmic orange phone contrasting with the dusty navy-blue background.\\n\\nTypography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):\\n- Top, centered, large all-caps headline in two lines: \\\"¿BUSCAS UN\\\" / \\\"PRO MAX?\\\"\\n- Below it, a smaller sentence-case subline: \\\"iPhone 17 Pro Max nuevo y sellado, desde S/ 4,600\\\"\\n- Bottom center: a white rounded-rectangle button with navy bold all-caps text \\\"PIDE HOY\\\"\\n- Under the button, small white all-caps text: \\\"CONTRAENTREGA EN LIMA\\\"\\n\\nGenerous negative space, balanced symmetric layout, modern minimalist ad aesthetic.\\n\\nReference images, in order: Image 1 — the iPhone 17 Pro Max in Naranja, front and back (product identity); Image 2 — the clear transparent gift case; Image 3 — the tempered-glass gift screen protector; Image 4 — the white USB-C gift cable. Use the references only for the exact shape, proportions, color and visible details of each product and keep them identical: do not invent or remove lenses, ports, buttons, prongs, cables or accessories. Ignore and never reproduce any logo, sticker, packaging or printed text visible in the references.\\n\\nFormat: vertical 3:4 for Facebook and Instagram Feed. Keep the headline, every label, the price and the button inside the central 4:5 area (leave at least 4% of plain background at the very top and bottom) with at least 6% side margins, so nothing is lost when the feed crops the image to 4:5.\\n\\nBrand-safety and text rules: do not show the Apple logo, the word AirPods or any other brand logo, trademark, sticker or printed label on devices, boxes, cases, cables or screens; device backs, props and accessories stay clean and unbranded. Any visible phone screen shows only an abstract dark wallpaper with no icons, apps or text. No people, no hands, no watermarks, no QR codes and no words other than the exact quoted strings above. Spell every Spanish word exactly as written, keeping accents (á, é, í, ó, ú), ñ, ¿ and ×; currency is always written S/ followed by a space.\\n\\n### Redimensión de T1\\nprompt_1x1:\\nResize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: \\\"TU IPHONE 17 PRO MAX, NUEVO Y SELLADO\\\"; \\\"1  Triple cámara.\\\"; \\\"2  Pantalla de 6.9 pulgadas.\\\"; \\\"3  Nuevo y sellado.\\\"; \\\"4  Case de regalo.\\\"; \\\"5  Mica de regalo.\\\"; \\\"6  Cable compatible de regalo.\\\"; \\\"Desde S/ 4,600\\\"; \\\"PIDE HOY\\\"; \\\"+ Audífonos Pro 2 de regalo. Regalos sujetos a disponibilidad.\\\". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.\\n\\nFormat: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.\\n\\nBrand-safety and text rules: do not show the Apple logo, the word AirPods or any other brand logo, trademark, sticker or printed label on devices, boxes, cases, cables or screens; device backs, props and accessories stay clean and unbranded. Any visible phone screen shows only an abstract dark wallpaper with no icons, apps or text. No people, no hands, no watermarks, no QR codes and no words other than the exact quoted strings above. Spell every Spanish word exactly as written, keeping accents (á, é, í, ó, ú), ñ, ¿ and ×; currency is always written S/ followed by a space.\\n\\nprompt_9x16:\\nResize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: \\\"TU IPHONE 17 PRO MAX, NUEVO Y SELLADO\\\"; \\\"1  Triple cámara.\\\"; \\\"2  Pantalla de 6.9 pulgadas.\\\"; \\\"3  Nuevo y sellado.\\\"; \\\"4  Case de regalo.\\\"; \\\"5  Mica de regalo.\\\"; \\\"6  Cable compatible de regalo.\\\"; \\\"Desde S/ 4,600\\\"; \\\"PIDE HOY\\\"; \\\"+ Audífonos Pro 2 de regalo. Regalos sujetos a disponibilidad.\\\". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.\\n\\nFormat: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.\\n\\nBrand-safety and text rules: do not show the Apple logo, the word AirPods or any other brand logo, trademark, sticker or printed label on devices, boxes, cases, cables or screens; device backs, props and accessories stay clean and unbranded. Any visible phone screen shows only an abstract dark wallpaper with no icons, apps or text. No people, no hands, no watermarks, no QR codes and no words other than the exact quoted strings above. Spell every Spanish word exactly as written, keeping accents (á, é, í, ó, ú), ñ, ¿ and ×; currency is always written S/ followed by a space.\\n\\n### meta\\n{\\\"textos\\\": [\\\"iPhone 17 Pro Max nuevo y sellado desde S/ 4,600. Pantalla de 6.9 pulgadas, en 256 GB, 512 GB o 1 TB.\\\", \\\"Silver, Naranja o Azul, con eSIM o chip físico. Incluye 4 regalos y 1 año de garantía por fallas de fábrica.\\\", \\\"Recibe un video de tu equipo antes de pagar. En Lima pagas al recibir; a provincia coordinamos el envío.\\\"], \\\"titulos\\\": [\\\"iPhone 17 Pro Max desde S/ 4,600\\\", \\\"Nuevo, sellado y con 4 regalos\\\", \\\"Video antes de pagar\\\"], \\\"descripcion\\\": \\\"Consulta disponibilidad\\\"}\\n</ejemplo>\\n\";\nconst SCHEMA = {\n  \"type\": \"object\",\n  \"additionalProperties\": false,\n  \"required\": [\n    \"filas\",\n    \"meta\",\n    \"notas\"\n  ],\n  \"properties\": {\n    \"filas\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"additionalProperties\": false,\n        \"required\": [\n          \"plantilla\",\n          \"refs\",\n          \"textos_imagen\",\n          \"prompt_master_3x4\",\n          \"prompt_1x1\",\n          \"prompt_9x16\"\n        ],\n        \"properties\": {\n          \"plantilla\": {\n            \"type\": \"string\",\n            \"enum\": [\n              \"T1\",\n              \"T2\",\n              \"T3\",\n              \"T4\",\n              \"T5\"\n            ]\n          },\n          \"refs\": {\n            \"type\": \"array\",\n            \"items\": {\n              \"type\": \"string\"\n            }\n          },\n          \"textos_imagen\": {\n            \"type\": \"array\",\n            \"items\": {\n              \"type\": \"string\"\n            }\n          },\n          \"prompt_master_3x4\": {\n            \"type\": \"string\"\n          },\n          \"prompt_1x1\": {\n            \"type\": \"string\"\n          },\n          \"prompt_9x16\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    },\n    \"meta\": {\n      \"type\": \"object\",\n      \"additionalProperties\": false,\n      \"required\": [\n        \"textos\",\n        \"titulos\",\n        \"descripcion\"\n      ],\n      \"properties\": {\n        \"textos\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          }\n        },\n        \"titulos\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          }\n        },\n        \"descripcion\": {\n          \"type\": \"string\"\n        }\n      }\n    },\n    \"notas\": {\n      \"type\": \"string\"\n    }\n  }\n};\nconst PLANTILLAS = ['T1', 'T2', 'T3', 'T4', 'T5'];\n\nconst out = [];\nfor (const f of fichas) {\n  const actuales = filas.filter((r) => r.producto_id === f.id);\n  const cambio = actuales.length === 0 || actuales.some((r) => String(r.huella) !== f.huella);\n  if (!cambio) continue;\n  const pedido = {\n    tarea: actuales.length ? 'actualizar' : 'crear',\n    plantillas: PLANTILLAS,\n    producto: f,\n    filas_actuales: actuales.map((r) => ({\n      plantilla: r.plantilla,\n      refs: String(r.refs || '').split('|').map((u) => u.trim()).filter(Boolean),\n      textos_imagen: r.textos_imagen,\n      prompt_master_3x4: r.prompt_master_3x4,\n      prompt_1x1: r.prompt_1x1,\n      prompt_9x16: r.prompt_9x16,\n    })),\n    meta_actual: actuales[0]\n      ? {\n          textos: [actuales[0].meta_texto_1, actuales[0].meta_texto_2, actuales[0].meta_texto_3],\n          titulos: [actuales[0].meta_titulo_1, actuales[0].meta_titulo_2, actuales[0].meta_titulo_3],\n          descripcion: actuales[0].meta_descripcion,\n        }\n      : null,\n  };\n  out.push({\n    json: {\n      producto_id: f.id,\n      ficha: f,\n      actuales: actuales.map((r) => ({ id: r.id, version: r.version })),\n      claude_body: {\n        model: cfg.claude_model,\n        max_tokens: 32000,\n        fallbacks: 'default',\n        output_config: { effort: cfg.claude_effort, format: { type: 'json_schema', schema: SCHEMA } },\n        system: [{ type: 'text', text: SYSTEM, cache_control: { type: 'ephemeral' } }],\n        messages: [{ role: 'user', content: JSON.stringify(pedido) }],\n      },\n    },\n  });\n}\nreturn out;\n"
+      },
+      "id": "17a846ff-88de-5ad1-9806-78943e056835",
+      "name": "A · Detectar cambios",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1200,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            },
+            {
+              "name": "anthropic-beta",
+              "value": "server-side-fallback-2026-07-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.claude_body) }}",
+        "options": {
+          "timeout": 600000,
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 2000
+            }
+          }
+        }
+      },
+      "id": "54096ca1-d6a8-5d63-a958-40eaa0ab3415",
+      "name": "A · Claude reescribe banners",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1440,
+        80
+      ],
+      "onError": "continueRegularOutput",
+      "notes": "Credencial: Header Auth \"Anthropic API\" (ver README)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Convierte la respuesta de Claude en filas de la hoja (estado \"pendiente\" para que las apruebes).\nconst prev = $('A · Detectar cambios').all().map((i) => i.json);\nconst now = new Date().toISOString();\nconst NOMBRES = {\n  \"T1\": \"Diagrama de partes (callouts numerados)\",\n  \"T2\": \"Flat lay con 3 llamadas\",\n  \"T3\": \"Ficha técnica\",\n  \"T4\": \"Oferta + plantilla de reseña\",\n  \"T5\": \"Knolling: problema → solución\"\n};\nconst VACIO = {\n  request_master: '', status_url_master: '', url_master: '', qa_resultado: '', qa_problemas: '',\n  request_1x1: '', status_url_1x1: '', url_1x1: '', request_9x16: '', status_url_9x16: '', url_9x16: '',\n};\n\nconst out = [];\n$input.all().forEach((item, idx) => {\n  const ctx = prev[idx];\n  const r = item.json;\n  let data = null;\n  let error = '';\n  if (r.error) error = `Error de la API de Claude: ${JSON.stringify(r.error).slice(0, 300)}`;\n  else if (r.stop_reason === 'refusal') error = 'Claude rechazó la solicitud.';\n  else if (r.stop_reason === 'max_tokens') error = 'La respuesta de Claude quedó cortada (max_tokens).';\n  else {\n    try {\n      data = JSON.parse((r.content || []).filter((b) => b.type === 'text').map((b) => b.text).join(''));\n    } catch (e) {\n      error = 'La respuesta de Claude no es JSON válido.';\n    }\n  }\n  if (!data) {\n    for (const a of ctx.actuales) {\n      out.push({ json: { id: a.id, estado: 'error_claude', qa_problemas: error, actualizado: now } });\n    }\n    return;\n  }\n  const f = ctx.ficha;\n  const meta = data.meta || {};\n  for (const fila of data.filas || []) {\n    const id = `${f.id}__${fila.plantilla}`;\n    const anterior = ctx.actuales.find((a) => a.id === id);\n    out.push({\n      json: {\n        id,\n        producto_id: f.id,\n        producto: f.nombre,\n        categoria: f.categoria,\n        plantilla: fila.plantilla,\n        plantilla_nombre: NOMBRES[fila.plantilla] || fila.plantilla,\n        precio: f.precio,\n        link: f.link,\n        refs: (fila.refs || []).join(' | '),\n        textos_imagen: JSON.stringify(fila.textos_imagen || []),\n        prompt_master_3x4: fila.prompt_master_3x4,\n        prompt_1x1: fila.prompt_1x1,\n        prompt_9x16: fila.prompt_9x16,\n        meta_texto_1: (meta.textos || [])[0] || '',\n        meta_texto_2: (meta.textos || [])[1] || '',\n        meta_texto_3: (meta.textos || [])[2] || '',\n        meta_titulo_1: (meta.titulos || [])[0] || '',\n        meta_titulo_2: (meta.titulos || [])[1] || '',\n        meta_titulo_3: (meta.titulos || [])[2] || '',\n        meta_descripcion: meta.descripcion || '',\n        meta_boton: 'Enviar mensaje',\n        requiere_resena_real: fila.plantilla === 'T4' ? 'sí' : 'no',\n        huella: f.huella,\n        estado: 'pendiente',\n        version: (Number(anterior && anterior.version) || 0) + 1,\n        ...VACIO,\n        actualizado: now,\n        notas_claude: data.notas || '',\n      },\n    });\n  }\n});\nreturn out;\n"
+      },
+      "id": "ff1848bd-0ccd-5542-a70d-2a744d529d49",
+      "name": "A · Filas para la hoja",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1680,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $('A · Config').first().json.sheet_url }}",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "banners",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "c2a2e172-24ed-5f2c-b819-df3794ea2383",
+      "name": "A · Guardar en hoja",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1920,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## B · Generar aprobados en Higgsfield\nTú apruebas en la hoja (estado = **aprobado**). Este flujo manda a Higgsfield el master 3:4 de esas filas, hasta `max_por_corrida` por clic (en *B · Config*). **Gasta créditos.** Solo se ejecuta a mano.",
+        "width": 900,
+        "height": 160,
+        "color": 3
+      },
+      "id": "272d7f43-fb5f-5d6d-8237-90e2e8d4452f",
+      "name": "Nota 11",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        360
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "90d4eba3-f19c-5be2-b407-c2c4c8c3bfce",
+      "name": "B ▶ Generar aprobados",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Configuración del flujo B (generar en Higgsfield las filas con estado \"aprobado\").\n// max_por_corrida limita cuántos banners se envían por clic (cada uno = 1 master + 2 formatos).\nreturn [{\n  json: {\n    sheet_url: 'PEGA_AQUI_EL_LINK_DE_TU_GOOGLE_SHEET',\n    max_por_corrida: 2,\n    resolucion: '2k',\n    calidad: 'high',\n  },\n}];\n"
+      },
+      "id": "c6e7da69-634e-551e-ad3d-b3d47ea28bd5",
+      "name": "B · Config",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $('B · Config').first().json.sheet_url }}",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "banners",
+          "mode": "name"
+        },
+        "options": {},
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "estado",
+              "lookupValue": "aprobado"
+            }
+          ]
+        }
+      },
+      "id": "c5ed21ac-a1f9-58ec-9760-eeaff882445f",
+      "name": "B · Leer aprobados",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        480,
+        560
+      ],
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Arma la solicitud a Higgsfield (Marketing Studio Image 2.5 Flare) para el master 3:4 de cada fila aprobada.\nconst cfg = $('B · Config').first().json;\nconst filas = $input.all().map((i) => i.json).filter((r) => r.id && r.estado === 'aprobado');\nconst lote = Date.now();\nreturn filas.slice(0, cfg.max_por_corrida).map((r) => ({\n  json: {\n    id: r.id,\n    // Misma clave en reintentos de esta corrida; nueva clave si vuelves a aprobar la fila más tarde.\n    idempotency_key: `${r.id}-v${r.version || 1}-master-${lote}`,\n    hf_body: {\n      prompt: r.prompt_master_3x4,\n      image_urls: String(r.refs || '').split('|').map((u) => u.trim()).filter(Boolean).slice(0, 16),\n      aspect_ratio: '3:4',\n      resolution: cfg.resolucion,\n      quality: cfg.calidad,\n      enhance_prompt: false,\n    },\n  },\n}));\n"
+      },
+      "id": "bdba9fbb-dcc6-5c33-a676-93943cff01fe",
+      "name": "B · Preparar solicitudes",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.higgsfield.ai/marketing-studio/image/flare",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Idempotency-Key",
+              "value": "={{ $json.idempotency_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.hf_body) }}",
+        "options": {
+          "timeout": 120000,
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 1000
+            }
+          }
+        }
+      },
+      "id": "6a7e0e3b-a462-50e9-b681-8ef080ea976d",
+      "name": "B · Higgsfield master 3:4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        560
+      ],
+      "onError": "continueRegularOutput",
+      "notes": "Credencial: Header Auth \"Higgsfield API\" (ver README)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Guarda en la hoja el request_id que devolvió Higgsfield.\nconst prev = $('B · Preparar solicitudes').all().map((i) => i.json);\nconst now = new Date().toISOString();\nreturn $input.all().map((item, i) => {\n  const r = item.json;\n  const fila = prev[i];\n  if (r.error || !r.request_id) {\n    return {\n      json: {\n        id: fila.id,\n        estado: 'error',\n        qa_problemas: `Higgsfield no aceptó el master: ${JSON.stringify(r.error || r).slice(0, 300)}`,\n        actualizado: now,\n      },\n    };\n  }\n  return {\n    json: {\n      id: fila.id,\n      estado: 'generando_master',\n      request_master: r.request_id,\n      status_url_master: r.status_url,\n      url_master: '', qa_resultado: '', qa_problemas: '',\n      request_1x1: '', status_url_1x1: '', url_1x1: '', request_9x16: '', status_url_9x16: '', url_9x16: '',\n      actualizado: now,\n    },\n  };\n});\n"
+      },
+      "id": "9985ba9a-66e0-56cf-aa8e-07dd856b49dd",
+      "name": "B · Unir respuesta",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1200,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $('B · Config').first().json.sheet_url }}",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "banners",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "d2b0f4bd-b361-5d7b-b1cf-4181e0b2b3bd",
+      "name": "B · Guardar en hoja",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1440,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## C · Revisar pendientes (cada 5 min)\nConsulta en Higgsfield los trabajos en curso. Cuando el master termina, **GPT-6 Astra** lo revisa (textos exactos, sin logos, producto fiel, nada cortado). Si aprueba, pide las versiones **1:1 (Feed)** y **9:16 (Stories/Reels)**; si no, la fila queda en **revisar** con los problemas anotados. Cuando ambas versiones terminan, la fila pasa a **listo**.",
+        "width": 1300,
+        "height": 180,
+        "color": 4
+      },
+      "id": "7bf9afc5-dc26-5e38-a239-e4b283d7c44e",
+      "name": "Nota 19",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        880
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "c57ff732-2491-5945-91d5-5af989e1097e",
+      "name": "C ▶ Revisar ahora",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1100
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 5
+            }
+          ]
+        }
+      },
+      "id": "9ce7ecd1-7c3c-5eb5-90a1-dc4f6bdc2b35",
+      "name": "C ⏰ Cada 5 minutos",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Configuración del flujo C (revisar trabajos en curso, QA con GPT-6 Astra y formatos 1:1 / 9:16).\n// Si tu cuenta de OpenAI aún no tiene acceso a gpt-6-astra, pon aquí otro modelo de OpenAI con visión que sí tengas.\nreturn [{\n  json: {\n    sheet_url: 'PEGA_AQUI_EL_LINK_DE_TU_GOOGLE_SHEET',\n    openai_model: 'gpt-6-astra',\n    resolucion: '2k',\n    calidad: 'high',\n  },\n}];\n"
+      },
+      "id": "96e796f5-0bf5-5542-8a7c-0f3c44dbbbf6",
+      "name": "C · Config",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $('C · Config').first().json.sheet_url }}",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "banners",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "id": "3bea90ee-f724-5da1-95a6-0eedbf13c446",
+      "name": "C · Leer hoja",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        480,
+        1180
+      ],
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Toma las filas con trabajos en curso: masters por revisar y formatos por terminar.\nconst out = [];\nfor (const r of $input.all().map((i) => i.json)) {\n  if (!r.id) continue;\n  if (r.estado === 'generando_master' && r.status_url_master) {\n    out.push({ json: { tipo: 'master', id: r.id, status_url: r.status_url_master, fila: r } });\n  }\n  if (r.estado === 'generando_formatos') {\n    for (const ratio of ['1x1', '9x16']) {\n      if (r[`status_url_${ratio}`]) {\n        out.push({ json: { tipo: 'formato', ratio, id: r.id, status_url: r[`status_url_${ratio}`], fila: r } });\n      }\n    }\n  }\n}\nreturn out;\n"
+      },
+      "id": "bd550372-c7ed-55f0-9f9c-0515f77cb18d",
+      "name": "C · Trabajos en curso",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "19d0cc15-6453-5a7c-aabb-76b81f86b8e9",
+              "leftValue": "={{ $json.tipo }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              },
+              "rightValue": "master"
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "21366cd1-4160-512b-a6d4-44155ab4fd40",
+      "name": "C · ¿Es master?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        960,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $json.status_url }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "ae0b3772-3bb7-5a6f-aff4-d3f748fc9d17",
+      "name": "C · Estado master",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1200,
+        1100
+      ],
+      "onError": "continueRegularOutput",
+      "notes": "Credencial: Header Auth \"Higgsfield API\" (ver README)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lee el estado del master y, si terminó, prepara la revisión de calidad con GPT-6 Astra.\nconst prev = $('C · ¿Es master?').all(0).map((i) => i.json);\nconst cfg = $('C · Config').first().json;\nconst QA_PROMPT = \"Eres el control de calidad de anuncios de REVO Store (Perú). La primera imagen es un banner generado para Meta Ads del producto \\\"{PRODUCTO}\\\". Las imágenes siguientes son fotos reales del producto tomadas de revoimport.com.\\n\\nRevisa el banner y responde con el esquema JSON:\\n1. texto_correcto: cada uno de estos textos aparece en el banner exactamente así, con sus tildes y sin faltas, y no hay palabras extra inventadas:\\n{TEXTOS}\\n2. sin_logos: no aparece el logo de Apple, la palabra \\\"AirPods\\\" ni ningún otro logo o marca de terceros en equipos, cajas, cases o pantallas.\\n3. producto_fiel: el producto coincide con las fotos de referencia (forma, color, número de cámaras, conectores) y no tiene accesorios, botones o puertos inventados.\\n4. layout_ok: nada importante está cortado por los bordes, el texto se lee a tamaño de celular y no tapa el producto; no hay personas, manos, marcas de agua ni códigos QR.\\n\\naprobado es true solo si los cuatro puntos se cumplen. En problemas, describe cada defecto en una frase corta en español, diciendo dónde está (por ejemplo: \\\"El precio dice S/ 4,60 en vez de S/ 4,600, abajo al centro\\\"). Si todo está bien, deja problemas vacío.\\n\";\nconst QA_SCHEMA = {\n  \"type\": \"object\",\n  \"additionalProperties\": false,\n  \"required\": [\n    \"aprobado\",\n    \"texto_correcto\",\n    \"sin_logos\",\n    \"producto_fiel\",\n    \"layout_ok\",\n    \"problemas\"\n  ],\n  \"properties\": {\n    \"aprobado\": {\n      \"type\": \"boolean\"\n    },\n    \"texto_correcto\": {\n      \"type\": \"boolean\"\n    },\n    \"sin_logos\": {\n      \"type\": \"boolean\"\n    },\n    \"producto_fiel\": {\n      \"type\": \"boolean\"\n    },\n    \"layout_ok\": {\n      \"type\": \"boolean\"\n    },\n    \"problemas\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    }\n  }\n};\n\nreturn $input.all().map((item, i) => {\n  const s = item.json;\n  const r = prev[i].fila;\n  const status = s.status || (s.error ? 'error_consulta' : '');\n  const fase = status === 'completed' ? 'completado' : ['failed', 'nsfw', 'canceled'].includes(status) ? 'fallido' : 'en_proceso';\n  const url = (s.images && s.images[0] && s.images[0].url) || '';\n  let textos = [];\n  try { textos = JSON.parse(r.textos_imagen || '[]'); } catch (e) { textos = []; }\n  const refs = String(r.refs || '').split('|').map((u) => u.trim()).filter(Boolean).slice(0, 3);\n  const qa_body = fase !== 'completado' ? null : {\n    model: cfg.openai_model,\n    input: [{\n      role: 'user',\n      content: [\n        {\n          type: 'input_text',\n          text: QA_PROMPT.replace('{PRODUCTO}', r.producto).replace('{TEXTOS}', textos.map((t) => `- \"${t}\"`).join('\\n')),\n        },\n        { type: 'input_image', image_url: url },\n        ...refs.map((u) => ({ type: 'input_image', image_url: u })),\n      ],\n    }],\n    text: { format: { type: 'json_schema', name: 'qa_banner', strict: true, schema: QA_SCHEMA } },\n  };\n  return { json: { id: r.id, fila: r, fase, status, url_master: url, qa_body } };\n});\n"
+      },
+      "id": "99c36f47-d098-532f-9e52-ba2157b77002",
+      "name": "C · Unir estado master",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1440,
+        1100
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "79281d33-0b48-5525-a54e-4b792fc51e78",
+              "leftValue": "={{ $json.fase }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              },
+              "rightValue": "completado"
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "eba7636a-2894-554d-85c3-6008800ea0ca",
+      "name": "C · ¿Master listo?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1680,
+        1100
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/responses",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.qa_body) }}",
+        "options": {
+          "timeout": 300000,
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 1000
+            }
+          }
+        }
+      },
+      "id": "56337fe0-8c9b-56f6-bfba-964fdeefdba0",
+      "name": "C · QA con GPT-6 Astra",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1920,
+        980
+      ],
+      "onError": "continueRegularOutput",
+      "notes": "Credencial: Header Auth \"OpenAI API\" (ver README)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Interpreta el veredicto de GPT-6 Astra.\nconst prev = $('C · ¿Master listo?').all(0).map((i) => i.json);\nreturn $input.all().map((item, i) => {\n  const r = item.json;\n  let text = r.output_text || '';\n  if (!text && Array.isArray(r.output)) {\n    for (const o of r.output) {\n      if (o.type !== 'message') continue;\n      for (const c of o.content || []) if (c.type === 'output_text') text += c.text;\n    }\n  }\n  let qa = null;\n  try { qa = JSON.parse(text); } catch (e) { qa = null; }\n  const problemas = qa\n    ? (qa.problemas || []).join(' | ')\n    : `QA sin respuesta válida${r.error ? `: ${JSON.stringify(r.error).slice(0, 200)}` : ''}`;\n  return { json: { ...prev[i], qa_aprobado: !!(qa && qa.aprobado), qa_problemas: problemas } };\n});\n"
+      },
+      "id": "afc7e2df-b261-5b92-b535-a67ce87c35cd",
+      "name": "C · Leer QA",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2160,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "6dcdbaec-a700-5969-b335-bb5bc39ac037",
+              "leftValue": "={{ $json.qa_aprobado }}",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              },
+              "rightValue": ""
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "b8cf6a02-b20c-5017-ae7d-3db71ebd4a4f",
+      "name": "C · ¿QA aprobado?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2400,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Con el master aprobado, pide a Higgsfield las versiones 1:1 (Feed) y 9:16 (Stories y Reels).\nconst cfg = $('C · Config').first().json;\nconst out = [];\nfor (const item of $input.all()) {\n  const p = item.json;\n  const r = p.fila;\n  for (const [ratio, aspect, prompt] of [['1x1', '1:1', r.prompt_1x1], ['9x16', '9:16', r.prompt_9x16]]) {\n    out.push({\n      json: {\n        id: r.id,\n        ratio,\n        url_master: p.url_master,\n        qa_problemas: p.qa_problemas,\n        idempotency_key: `${r.id}-v${r.version || 1}-${ratio}-${r.request_master}`,\n        hf_body: {\n          prompt,\n          image_urls: [p.url_master],\n          aspect_ratio: aspect,\n          resolution: cfg.resolucion,\n          quality: cfg.calidad,\n          enhance_prompt: false,\n        },\n      },\n    });\n  }\n}\nreturn out;\n"
+      },
+      "id": "5b244359-e92d-5fc0-a964-cb7efb5ad8cb",
+      "name": "C · Preparar formatos",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2640,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.higgsfield.ai/marketing-studio/image/flare",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Idempotency-Key",
+              "value": "={{ $json.idempotency_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.hf_body) }}",
+        "options": {
+          "timeout": 120000,
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 1000
+            }
+          }
+        }
+      },
+      "id": "8e4d57e8-4a4e-5482-95c0-3b19f435c8fb",
+      "name": "C · Higgsfield 1:1 y 9:16",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2880,
+        900
+      ],
+      "onError": "continueRegularOutput",
+      "notes": "Credencial: Header Auth \"Higgsfield API\" (ver README)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Agrupa por fila los request_id de los dos formatos.\nconst prev = $('C · Preparar formatos').all().map((i) => i.json);\nconst now = new Date().toISOString();\nconst porFila = {};\n$input.all().forEach((item, i) => {\n  const s = item.json;\n  const p = prev[i];\n  const row = porFila[p.id] || (porFila[p.id] = {\n    id: p.id, estado: 'generando_formatos', url_master: p.url_master,\n    qa_resultado: 'aprobado', qa_problemas: p.qa_problemas || '', actualizado: now,\n  });\n  if (s.error || !s.request_id) {\n    row.estado = 'error_formatos';\n    row.qa_problemas = `${row.qa_problemas} | Higgsfield no aceptó el formato ${p.ratio}`.replace(/^ \\| /, '');\n    return;\n  }\n  row[`request_${p.ratio}`] = s.request_id;\n  row[`status_url_${p.ratio}`] = s.status_url;\n});\nreturn Object.values(porFila).map((json) => ({ json }));\n"
+      },
+      "id": "1626e07d-e281-58aa-b2db-ea06d8981a3c",
+      "name": "C · Unir formatos",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3120,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// El QA encontró problemas: queda para que lo revises (vuelve a poner \"aprobado\" para regenerar).\nconst now = new Date().toISOString();\nreturn $input.all().map((item) => ({\n  json: {\n    id: item.json.id,\n    estado: 'revisar',\n    url_master: item.json.url_master,\n    qa_resultado: 'observado',\n    qa_problemas: item.json.qa_problemas,\n    actualizado: now,\n  },\n}));\n"
+      },
+      "id": "eeb46412-b10e-5350-8dc1-34eca89c2080",
+      "name": "C · Marcar revisar",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2640,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "b785d64a-fdf8-5dfb-b5c7-920569626ead",
+              "leftValue": "={{ $json.fase }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              },
+              "rightValue": "fallido"
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "1f9d75de-33e3-5f56-a83d-e791ab4dd5f1",
+      "name": "C · ¿Falló?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1920,
+        1220
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Higgsfield terminó el master con error.\nconst now = new Date().toISOString();\nreturn $input.all().map((item) => ({\n  json: {\n    id: item.json.id,\n    estado: 'error',\n    qa_problemas: `Higgsfield terminó el master con estado \"${item.json.status}\"`,\n    actualizado: now,\n  },\n}));\n"
+      },
+      "id": "8ac7b225-4896-5d49-9d2e-b542f963d3ec",
+      "name": "C · Marcar error",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2160,
+        1220
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $json.status_url }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "14887c34-12ab-504e-be29-543e1f9e1a41",
+      "name": "C · Estado formatos",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1200,
+        1380
+      ],
+      "onError": "continueRegularOutput",
+      "notes": "Credencial: Header Auth \"Higgsfield API\" (ver README)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Cuando las dos versiones terminan, guarda sus links y marca la fila como lista.\nconst prev = $('C · ¿Es master?').all(1).map((i) => i.json);\nconst now = new Date().toISOString();\nconst FIN_MAL = ['failed', 'nsfw', 'canceled'];\nconst grupos = {};\n$input.all().forEach((item, i) => {\n  const s = item.json;\n  const p = prev[i];\n  const g = grupos[p.id] || (grupos[p.id] = { fila: p.fila, res: {} });\n  g.res[p.ratio] = {\n    status: s.status || (s.error ? 'error_consulta' : ''),\n    url: (s.images && s.images[0] && s.images[0].url) || '',\n  };\n});\nconst out = [];\nfor (const [id, g] of Object.entries(grupos)) {\n  const estados = Object.values(g.res).map((x) => x.status);\n  if (estados.some((x) => FIN_MAL.includes(x))) {\n    out.push({ json: { id, estado: 'error_formatos', qa_problemas: `Formato con estado ${estados.join('/')}`, actualizado: now } });\n  } else if (estados.length === 2 && estados.every((x) => x === 'completed')) {\n    out.push({\n      json: {\n        id,\n        estado: g.fila.requiere_resena_real === 'sí' ? 'listo_falta_resena' : 'listo',\n        url_1x1: g.res['1x1'].url,\n        url_9x16: g.res['9x16'].url,\n        actualizado: now,\n      },\n    });\n  }\n}\nreturn out;\n"
+      },
+      "id": "b797ab94-7dbb-5ee3-846d-aeb7bd21cbe5",
+      "name": "C · Agrupar formatos",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1440,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $('C · Config').first().json.sheet_url }}",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "banners",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "239863d3-2ef4-53f9-b0d2-7decd663cb24",
+      "name": "C · Guardar en hoja",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        3360,
+        1180
+      ]
+    }
+  ],
+  "connections": {
+    "A ▶ Actualizar biblioteca": {
+      "main": [
+        [
+          {
+            "node": "A · Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "A ⏰ Lunes 8:00": {
+      "main": [
+        [
+          {
+            "node": "A · Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "A · Config": {
+      "main": [
+        [
+          {
+            "node": "A · Leer config.js de la web",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "A · Leer config.js de la web": {
+      "main": [
+        [
+          {
+            "node": "A · Extraer catálogo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "A · Extraer catálogo": {
+      "main": [
+        [
+          {
+            "node": "A · Leer hoja",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "A · Leer hoja": {
+      "main": [
+        [
+          {
+            "node": "A · Detectar cambios",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "A · Detectar cambios": {
+      "main": [
+        [
+          {
+            "node": "A · Claude reescribe banners",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "A · Claude reescribe banners": {
+      "main": [
+        [
+          {
+            "node": "A · Filas para la hoja",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "A · Filas para la hoja": {
+      "main": [
+        [
+          {
+            "node": "A · Guardar en hoja",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "B ▶ Generar aprobados": {
+      "main": [
+        [
+          {
+            "node": "B · Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "B · Config": {
+      "main": [
+        [
+          {
+            "node": "B · Leer aprobados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "B · Leer aprobados": {
+      "main": [
+        [
+          {
+            "node": "B · Preparar solicitudes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "B · Preparar solicitudes": {
+      "main": [
+        [
+          {
+            "node": "B · Higgsfield master 3:4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "B · Higgsfield master 3:4": {
+      "main": [
+        [
+          {
+            "node": "B · Unir respuesta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "B · Unir respuesta": {
+      "main": [
+        [
+          {
+            "node": "B · Guardar en hoja",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C ▶ Revisar ahora": {
+      "main": [
+        [
+          {
+            "node": "C · Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C ⏰ Cada 5 minutos": {
+      "main": [
+        [
+          {
+            "node": "C · Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Config": {
+      "main": [
+        [
+          {
+            "node": "C · Leer hoja",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Leer hoja": {
+      "main": [
+        [
+          {
+            "node": "C · Trabajos en curso",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Trabajos en curso": {
+      "main": [
+        [
+          {
+            "node": "C · ¿Es master?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · ¿Es master?": {
+      "main": [
+        [
+          {
+            "node": "C · Estado master",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "C · Estado formatos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Estado master": {
+      "main": [
+        [
+          {
+            "node": "C · Unir estado master",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Unir estado master": {
+      "main": [
+        [
+          {
+            "node": "C · ¿Master listo?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · ¿Master listo?": {
+      "main": [
+        [
+          {
+            "node": "C · QA con GPT-6 Astra",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "C · ¿Falló?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · QA con GPT-6 Astra": {
+      "main": [
+        [
+          {
+            "node": "C · Leer QA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Leer QA": {
+      "main": [
+        [
+          {
+            "node": "C · ¿QA aprobado?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · ¿QA aprobado?": {
+      "main": [
+        [
+          {
+            "node": "C · Preparar formatos",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "C · Marcar revisar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Preparar formatos": {
+      "main": [
+        [
+          {
+            "node": "C · Higgsfield 1:1 y 9:16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Higgsfield 1:1 y 9:16": {
+      "main": [
+        [
+          {
+            "node": "C · Unir formatos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · ¿Falló?": {
+      "main": [
+        [
+          {
+            "node": "C · Marcar error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Estado formatos": {
+      "main": [
+        [
+          {
+            "node": "C · Agrupar formatos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Unir formatos": {
+      "main": [
+        [
+          {
+            "node": "C · Guardar en hoja",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Marcar revisar": {
+      "main": [
+        [
+          {
+            "node": "C · Guardar en hoja",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Marcar error": {
+      "main": [
+        [
+          {
+            "node": "C · Guardar en hoja",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C · Agrupar formatos": {
+      "main": [
+        [
+          {
+            "node": "C · Guardar en hoja",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Lima",
+    "saveManualExecutions": true
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "tags": []
+}

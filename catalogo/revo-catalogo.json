@@ -1,0 +1,215 @@
+{
+  "fuente": "https://revoimport.com/config.js?v=1.3.0-revo-20260930",
+  "leido": "2026-10-08",
+  "marca": "REVO Store",
+  "tagline": "El servicio que quieres, sin la duda de siempre.",
+  "whatsapp": "+51 992 187 184",
+  "instagram": "@revostore_pe",
+  "tiktok": "@revostore.pe",
+  "pagos": ["Yape", "Plin", "Transferencia", "Efectivo"],
+  "envios": {
+    "lima": "Contraentrega en el punto coordinado (pagas al recibir).",
+    "provincia": "Pago, costo de envío y entrega a coordinar por WhatsApp. Solo los combos tienen envío gratis."
+  },
+  "afirmaciones_permitidas": {
+    "iphone": [
+      "Nuevo y sellado (caja cerrada, sin activaciones previas)",
+      "1 año de garantía por fallas de fábrica (garantía de REVO, no de Apple)",
+      "Recibes un video de tu equipo antes de pagar",
+      "4 regalos por iPhone: cable compatible, case, mica y Audífonos Pro 2 (modelo, marca y disponibilidad a confirmar)",
+      "Contraentrega en Lima; envíos a todo el Perú (costo a coordinar)"
+    ],
+    "combos_pro3": [
+      "Audífonos Pro 3 Calidad Premium, compatibles, NO originales de Apple (debe decirse siempre)",
+      "Envío gratis a Lima y provincia",
+      "Case protector de regalo en el color que elijas (6 colores)",
+      "COMBO PRO 3: antes S/ 144, ahora S/ 119; pagas al llegar a tu casa"
+    ],
+    "combo_20w": [
+      "Cubo original de 20 W + cable a elección (USB-C a USB-C o a Lightning)",
+      "Envío gratis a Lima y provincia"
+    ]
+  },
+  "afirmaciones_prohibidas": [
+    "Logo de Apple o la palabra AirPods en cualquier anuncio",
+    "Decir u insinuar que los audífonos Pro 3 / Pro 2 son originales de Apple",
+    "Garantía Apple o distribuidor autorizado",
+    "Stock inmediato o entrega inmediata (todo el catálogo está 'por pedido')",
+    "Envío gratis en iPhone o accesorios sueltos",
+    "Descuentos, precios tachados o fechas límite que no existan en la web",
+    "Devoluciones gratis (la web no publica política de devoluciones)",
+    "Reseñas, estrellas o testimonios inventados",
+    "Especificaciones que la web no menciona (chip, megapíxeles, batería, materiales)"
+  ],
+  "productos": [
+    {
+      "id": "iphone-18-pro-max", "huella_web": "59e553e4", "categoria": "iphone", "nombre": "iPhone 18 Pro Max",
+      "precio": "S/ 6,550", "precio_num": 6550, "precio_desde": false, "precio_antes": null,
+      "capacidades": ["256 GB"], "pantalla": null, "sim": "Región y SIM a confirmar",
+      "colores": ["Guinda", "Celeste", "Silver", "Negro"], "color_banner": "Guinda",
+      "camara": "triple", "link": "https://revoimport.com/p/iphone-18-pro-max/",
+      "refs": {
+        "par": "https://revoimport.com/assets/apple/iphone-18-pro-max/guinda/guinda-1.webp",
+        "camara": "https://revoimport.com/assets/apple/iphone-18-pro-max/guinda/guinda.webp",
+        "lateral": "https://revoimport.com/assets/apple/iphone-18-pro-max/guinda/guinda-2.webp"
+      }
+    },
+    {
+      "id": "iphone-18-pro", "huella_web": "649a2eaf", "categoria": "iphone", "nombre": "iPhone 18 Pro",
+      "precio": "S/ 6,200", "precio_num": 6200, "precio_desde": false, "precio_antes": null,
+      "capacidades": ["256 GB"], "pantalla": null, "sim": "Región y SIM a confirmar",
+      "colores": ["Guinda", "Celeste", "Silver", "Negro"], "color_banner": "Celeste",
+      "camara": "triple", "link": "https://revoimport.com/p/iphone-18-pro/",
+      "refs": {
+        "par": "https://revoimport.com/assets/apple/iphone-18-pro/celeste/1.webp",
+        "camara": "https://revoimport.com/assets/apple/iphone-18-pro/celeste/3.webp",
+        "lateral": "https://revoimport.com/assets/apple/iphone-18-pro/celeste/2.webp"
+      }
+    },
+    {
+      "id": "iphone-17-pro-max", "huella_web": "5fba42b8", "categoria": "iphone", "nombre": "iPhone 17 Pro Max",
+      "precio": "Desde S/ 4,600", "precio_num": 4600, "precio_desde": true, "precio_antes": null,
+      "capacidades": ["256 GB", "512 GB", "1 TB"], "pantalla": "6.9 pulgadas", "sim": "eSIM o chip físico",
+      "colores": ["Silver", "Naranja", "Azul"], "color_banner": "Naranja",
+      "camara": "triple", "link": "https://revoimport.com/p/iphone-17-pro-max/",
+      "refs": {
+        "par": "https://revoimport.com/assets/apple/iphone-17-pro-max/orange/1-orange.webp",
+        "camara": "https://revoimport.com/assets/apple/iphone-17-pro-max/orange/3-orange.webp",
+        "lateral": "https://revoimport.com/assets/apple/iphone-17-pro-max/orange/4-orange.webp"
+      }
+    },
+    {
+      "id": "iphone-17-pro", "huella_web": "0cdc7d94", "categoria": "iphone", "nombre": "iPhone 17 Pro",
+      "precio": "Desde S/ 4,190", "precio_num": 4190, "precio_desde": true, "precio_antes": null,
+      "capacidades": ["256 GB"], "pantalla": "6.3 pulgadas", "sim": "eSIM o chip físico",
+      "colores": ["Silver", "Naranja", "Azul"], "color_banner": "Azul",
+      "camara": "triple", "link": "https://revoimport.com/p/iphone-17-pro/",
+      "refs": {
+        "par": "https://revoimport.com/assets/apple/iphone-17-pro/blue/blue1.webp",
+        "camara": "https://revoimport.com/assets/apple/iphone-17-pro/blue/blue3.webp",
+        "lateral": "https://revoimport.com/assets/apple/iphone-17-pro/blue/blue4.webp"
+      }
+    },
+    {
+      "id": "iphone-17", "huella_web": "48a68257", "categoria": "iphone", "nombre": "iPhone 17",
+      "precio": "Desde S/ 3,200", "precio_num": 3200, "precio_desde": true, "precio_antes": null,
+      "capacidades": ["256 GB"], "pantalla": "6.3 pulgadas", "sim": "eSIM o chip físico",
+      "colores": ["Lila", "Azul", "Negro", "Verde", "Blanco"], "color_banner": "Lila",
+      "camara": "doble", "link": "https://revoimport.com/p/iphone-17/",
+      "refs": {
+        "par": "https://revoimport.com/assets/apple/iphone-17/lavender/lavender1.webp",
+        "camara": "https://revoimport.com/assets/apple/iphone-17/lavender/lavender3.webp",
+        "lateral": "https://revoimport.com/assets/apple/iphone-17/lavender/lavender2.webp"
+      }
+    },
+    {
+      "id": "cable-usbc-lightning", "huella_web": "2f212f55", "categoria": "accesorios", "nombre": "Cable USB-C a Lightning",
+      "precio": "S/ 35", "precio_num": 35, "precio_antes": null,
+      "datos": ["1 m", "sellado", "confirma la compatibilidad con tu equipo"],
+      "link": "https://revoimport.com/p/cable-usbc-lightning/",
+      "refs": {"producto": "https://revoimport.com/assets/revo/accessories/cable-usbc-lightning.webp",
+               "iphone_lightning": "https://revoimport.com/assets/revo/iphone-13-blanco-sin-fondo.png"}
+    },
+    {
+      "id": "cable-usbc-usbc", "huella_web": "26e4dfad", "categoria": "accesorios", "nombre": "Cable USB-C a USB-C",
+      "precio": "S/ 45", "precio_num": 45, "precio_antes": null,
+      "datos": ["1 m", "sellado", "confirma la compatibilidad con tu equipo"],
+      "link": "https://revoimport.com/p/cable-usbc-usbc/",
+      "refs": {"producto": "https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp",
+               "iphone_usbc": "https://revoimport.com/assets/apple/iphone-17/sage/sage.webp"}
+    },
+    {
+      "id": "cargador-20w", "huella_web": "3032c7a9", "categoria": "accesorios", "nombre": "Cubo USB-C 20 W",
+      "precio": "S/ 99", "precio_num": 99, "precio_antes": null,
+      "datos": ["carga rápida", "20 W", "puerto USB-C", "compacto", "confirma la compatibilidad con tu equipo"],
+      "link": "https://revoimport.com/p/cargador-20w/",
+      "refs": {"producto": "https://revoimport.com/assets/revo/accessories/cargador-20w.png",
+               "cable": "https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp"}
+    },
+    {
+      "id": "cargador-40w", "huella_web": "1584018f", "categoria": "accesorios", "nombre": "Cargador USB-C 40 W",
+      "precio": "S/ 185", "precio_num": 185, "precio_antes": null,
+      "datos": ["original (según la web)", "40 W", "máxima potencia", "puerto USB-C", "confirma la compatibilidad con tu equipo"],
+      "link": "https://revoimport.com/p/cargador-40w/",
+      "refs": {"producto": "https://revoimport.com/assets/revo/accessories/cargador-40w.png",
+               "cable": "https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp"}
+    },
+    {
+      "id": "case-iphone", "huella_web": "d0fed5f7", "categoria": "accesorios", "nombre": "Case transparente",
+      "precio": "S/ 15", "precio_num": 15, "precio_antes": null,
+      "datos": ["protege sin tapar el color", "todos los modelos", "calidad premium", "confirma la compatibilidad con tu equipo"],
+      "link": "https://revoimport.com/p/case-iphone/",
+      "refs": {"producto": "https://revoimport.com/assets/revo/accessories/case-iphone.webp",
+               "iphone": "https://revoimport.com/assets/apple/iphone-17-pro/orange/orange1.webp"}
+    },
+    {
+      "id": "mica-iphone", "huella_web": "2cffdb44", "categoria": "accesorios", "nombre": "Mica de protección",
+      "precio": "S/ 10", "precio_num": 10, "precio_antes": null,
+      "datos": ["vidrio templado", "calidad premium", "confirma la compatibilidad con tu equipo"],
+      "link": "https://revoimport.com/p/mica-iphone/",
+      "refs": {"producto": "https://revoimport.com/assets/revo/accessories/mica-iphone.webp",
+               "iphone": "https://revoimport.com/assets/apple/iphone-17-pro/silver/silver2.webp"}
+    },
+    {
+      "id": "combo-pro-3-a1", "huella_web": "76e09872", "categoria": "combos", "nombre": "COMBO PRO 3",
+      "precio": "S/ 119", "precio_num": 119, "precio_antes": "S/ 144",
+      "incluye": ["1 Pro 3 Calidad Premium", "1 cable USB-C a USB-C", "1 case de regalo"],
+      "datos": ["envío gratis a Lima y provincia", "pagas al llegar a tu casa", "6 colores de case", "audífonos compatibles, no originales de Apple"],
+      "link": "https://revoimport.com/p/combo-pro-3-a1/",
+      "refs": {"audifonos": "https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp",
+               "cases": "https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png",
+               "cable": "https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp"}
+    },
+    {
+      "id": "combo-pro-3-4en1", "huella_web": "0c3f2c0b", "categoria": "combos", "nombre": "COMBO PRO 3 · 4 en 1",
+      "precio": "S/ 219", "precio_num": 219, "precio_antes": null,
+      "incluye": ["1 Pro 3 Calidad Premium con cable en caja", "1 cubo original de 20 W", "1 cable a elección (USB-C o Lightning)", "1 case de regalo"],
+      "datos": ["envío gratis a Lima y provincia", "6 colores de case", "audífonos compatibles, no originales de Apple"],
+      "link": "https://revoimport.com/p/combo-pro-3-4en1/",
+      "refs": {"audifonos": "https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp",
+               "cases": "https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png",
+               "cubo": "https://revoimport.com/assets/revo/accessories/cargador-20w.png",
+               "cable": "https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp"}
+    },
+    {
+      "id": "combo-pro-3-2x1", "huella_web": "87c6334d", "categoria": "combos", "nombre": "COMBO PRO 3 · 2×1",
+      "precio": "S/ 199", "precio_num": 199, "precio_antes": null,
+      "incluye": ["2 Pro 3 Calidad Premium, cada uno con cable en su caja", "2 cases de regalo, uno por unidad"],
+      "datos": ["envío gratis a Lima y provincia", "eliges un color de case para cada uno", "audífonos compatibles, no originales de Apple"],
+      "link": "https://revoimport.com/p/combo-pro-3-2x1/",
+      "refs": {"audifonos": "https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp",
+               "cases": "https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png"}
+    },
+    {
+      "id": "combo-20w", "huella_web": "e9472832", "categoria": "combos", "nombre": "COMBO 20 W",
+      "precio": "S/ 110", "precio_num": 110, "precio_antes": null,
+      "incluye": ["1 cubo original de 20 W", "1 cable a elección: USB-C a USB-C o a Lightning"],
+      "datos": ["envío gratis a Lima y provincia"],
+      "link": "https://revoimport.com/p/combo-20w/",
+      "refs": {"cubo": "https://revoimport.com/assets/revo/accessories/cargador-20w.png",
+               "cable_usbc": "https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp",
+               "cable_lightning": "https://revoimport.com/assets/revo/accessories/cable-usbc-lightning.webp"}
+    }
+  ],
+  "servicios": [
+    {
+      "id": "renueva-iphone", "nombre": "Renueva tu iPhone",
+      "datos": ["Entrega tu iPhone usado como parte de pago de uno nuevo", "Evaluamos batería, pantalla, IMEI y funcionamiento", "La valoración final depende de modelo, capacidad, estado, batería, IMEI, accesorios y funcionamiento", "Con la valoración confirmada, coordinamos la diferencia"],
+      "link": "https://revoimport.com/#renueva",
+      "refs": {"usado": "https://revoimport.com/assets/revo/iphone-13-blanco-sin-fondo.png",
+               "nuevo": "https://revoimport.com/assets/apple/iphone-17-pro/silver/silver1.webp"}
+    },
+    {
+      "id": "contraentrega", "nombre": "Contraentrega en Lima y envíos a todo el Perú",
+      "datos": ["Lima: pagas al recibir en el punto coordinado", "Provincia: pago, costo de envío y entrega a coordinar por WhatsApp", "Yape, Plin, transferencia o efectivo", "Eliges, revisas tu pedido y lo pides por WhatsApp"],
+      "link": "https://revoimport.com/#como-comprar",
+      "refs": {"iphones": "https://revoimport.com/assets/revo/hero-phones-clean.png"}
+    },
+    {
+      "id": "video-garantia", "nombre": "Video antes de pagar y 1 año de garantía",
+      "datos": ["Recibe un video de tu equipo antes de pagar", "iPhones nuevos y sellados", "1 año de garantía por fallas de fábrica"],
+      "link": "https://revoimport.com/#garantia",
+      "refs": {"iphones": "https://revoimport.com/assets/revo/hero-phones-clean.png"}
+    }
+  ]
+}
