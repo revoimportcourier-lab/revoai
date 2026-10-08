@@ -63,7 +63,10 @@ o `error_claude`, con el detalle en `qa_problemas`. Para regenerar una fila, vue
 
 ### Antes de publicar en Meta
 
-- Usa la versión 1:1 o 3:4 para Feed y la 9:16 para Stories y Reels en el mismo anuncio.
+- Usa la versión 4:5 (o 1:1) para Feed, la 9:16 para Stories y la versión Reels para Reels, en el mismo anuncio.
+  La versión Reels sale de la 9:16 con `python3 scripts/reels_safe.py entrada.png salida.png`: aleja la
+  imagen para que titular, producto, precio y botón queden fuera del 14 % superior y el 35 % inferior,
+  que tapa la interfaz de Reels.
 - Sube los 3 textos principales y los 3 títulos como opciones del mismo anuncio. Botón: *Enviar mensaje* (WhatsApp).
 - Las T4 llevan la tarjeta de reseña en blanco: complétala con una reseña real (con permiso del cliente) o no publiques esa versión.
 - Revisa que el precio siga igual en la web.
