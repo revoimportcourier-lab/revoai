@@ -28,7 +28,7 @@ recorte a 4:5 en el Feed sin cortar nada.
 - Solo el texto que va entre comillas, con tildes, ñ, ¿ y × exactos; moneda "S/ ".
 - Las fotos de referencia son todas de revoimport.com y se usan solo para la forma, el color y los
   detalles del producto.
-- Combos Pro 3: siempre la línea "Audífonos compatibles, no originales de Apple."
+- Combos Pro 3: en la imagen, la línea "Calidad Premium"; en el texto del anuncio, "compatibles, no originales de Apple".
 
 ## Cobertura
 

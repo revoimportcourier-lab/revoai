@@ -27,7 +27,9 @@ CUBO_20W = "https://revoimport.com/assets/revo/accessories/cargador-20w.png"
 IPHONE_LIGHTNING = "https://revoimport.com/assets/revo/iphone-13-blanco-sin-fondo.png"
 IPHONE_USBC = "https://revoimport.com/assets/apple/iphone-17/sage/sage.webp"
 
-DISCLOSURE_PRO3 = "Audífonos compatibles, no originales de Apple."
+# Línea fija en la imagen de los combos Pro 3 (pedido del dueño). El aviso "compatibles, no originales de
+# Apple" va en el texto del anuncio (meta_texto_3), no en la imagen.
+CALIDAD_PRO3 = "Calidad Premium"
 
 # ---------------------------------------------------------------------------
 # Reglas comunes que se agregan a TODOS los prompts
@@ -645,7 +647,7 @@ def build_products():
                          "Image 2) next to the coiled white USB-C cable (Image 3) and a small fan of the other case colors",
             lower=[("3", "on the steel-blue case", "Case de regalo."), ("4", "on the cable", "Cable USB-C a USB-C."),
                    ("5", "on the fan of colors", "6 colores para elegir.")],
-            price=p["precio"], cta="PIDE HOY", nota=f"{ENVIO} {DISCLOSURE_PRO3}")),
+            price=p["precio"], cta="PIDE HOY", nota=f"{ENVIO} {CALIDAD_PRO3}.")),
         "T2": dict(refs=[r_ear, r_cases, r_cable], prompt=t2(
             scene=f"{ear}, the charging case open inside a plain lilac protective case, with the coiled white USB-C "
                   "cable (Image 3) and three more plain cases in nude pink, steel blue and black (Image 2) fanned beside it",
@@ -653,7 +655,7 @@ def build_products():
             captions=[("audífonos + cable + case.", "upper left, with a line going down to the earbuds"),
                       ("6 colores de case.", "upper right, with an L-shaped line pointing to the fanned cases"),
                       ("envío gratis a todo el perú.", "lower center, with a vertical line from the cable")],
-            cta="PIDE HOY", nota=DISCLOSURE_PRO3)),
+            cta="PIDE HOY", nota=CALIDAD_PRO3)),
         "T3": dict(refs=[r_ear, r_cases, r_cable], prompt=t3(
             h="COMBO PRO 3.",
             icons=[("earbuds icon", "Audífonos", "Pro 3"), ("cable icon", "Cable USB-C", "a USB-C"), ("gift icon", "Case de", "regalo")],
@@ -661,19 +663,19 @@ def build_products():
                      ("Case de regalo", "close-up of the plain gray protective case"),
                      ("Cable USB-C", "close-up of the USB-C plug")],
             hero=f"{ear}, the charging case fitted in a plain gray protective case, the earbuds beside it and the coiled cable (Image 3)",
-            price=p["precio"], cta="PIDE HOY", nota=f"{ENVIO} {DISCLOSURE_PRO3}")),
+            price=p["precio"], cta="PIDE HOY", nota=f"{ENVIO} {CALIDAD_PRO3}.")),
         "T4": dict(refs=[r_ear, r_cases, r_cable], prompt=t4(
             badge="Ahorra S/ 25",
             hero=f"{ear}, the case open with the earbuds, fitted in a plain steel-blue protective case, beside the coiled white USB-C cable",
             title="Combo Pro 3: audífonos, cable y case", price=p["precio"], old=p["precio_antes"],
-            sub="Envío gratis a todo el Perú · Pagas al recibir", nota=DISCLOSURE_PRO3)),
+            sub="Envío gratis a todo el Perú · Pagas al recibir", nota=CALIDAD_PRO3)),
         "T5": dict(refs=[r_ear, r_cases, r_cable], prompt=t5(
             bg="dusty navy-blue", center=f"{ear}, the charging case fitted in a plain lilac protective case",
             top="plain protective cases in black, gray and steel blue (Image 2)",
             left="the coiled white USB-C cable (Image 3)", right="plain protective cases in nude pink and grayish purple (Image 2)",
             bottom="a set of keys, black sunglasses, a small leather wallet, a phone lying screen-down without logos",
             l1="¿AUDÍFONOS NUEVOS", l2="POR S/ 119?", sub="Pro 3 Calidad Premium + cable + case de regalo",
-            cta="PIDE HOY", under="ENVÍO GRATIS A TODO EL PERÚ", nota=DISCLOSURE_PRO3,
+            cta="PIDE HOY", under="ENVÍO GRATIS A TODO EL PERÚ", nota=CALIDAD_PRO3,
             contrast="the white earbuds and pastel cases contrasting with the blue background")),
     }, dict(textos=["Combo Pro 3 a S/ 119 (antes S/ 144): audífonos Calidad Premium + cable USB-C + case de regalo.",
                     "Envío gratis a Lima y provincia, y pagas al llegar a tu casa. Elige tu case entre 6 colores.",
@@ -691,7 +693,7 @@ def build_products():
                          "and a plain nude-pink protective case for the charging case (Image 2)",
             lower=[("3", "on the adapter", "Cubo original de 20 W."), ("4", "on the cable", "Cable a elección."),
                    ("5", "on the pink case", "Case de regalo.")],
-            price=p["precio"], cta="PIDE HOY", nota=f"{ENVIO} {DISCLOSURE_PRO3}")),
+            price=p["precio"], cta="PIDE HOY", nota=f"{ENVIO} {CALIDAD_PRO3}.")),
         "T2": dict(refs=[r_ear, r_cases, r_cubo, r_cable], prompt=t2(
             scene=f"{ear}, the charging case in a plain grayish-purple protective case, next to the white 20 W power "
                   "adapter (Image 3) and the coiled white USB-C cable (Image 4)",
@@ -699,7 +701,7 @@ def build_products():
             captions=[("cubo original de 20 w.", "upper left, with a line going down to the adapter"),
                       ("cable a elección.", "upper right, with an L-shaped line pointing to the cable"),
                       ("case de regalo.", "lower center, with a vertical line from the case")],
-            price=p["precio"], cta="PIDE HOY", nota=f"{ENVIO} {DISCLOSURE_PRO3}")),
+            price=p["precio"], cta="PIDE HOY", nota=f"{ENVIO} {CALIDAD_PRO3}.")),
         "T3": dict(refs=[r_ear, r_cases, r_cubo, r_cable], prompt=t3(
             h="COMBO 4 EN 1.",
             icons=[("earbuds icon", "Audífonos", "Pro 3"), (f'the text "20 W" inside the circle', "Cubo original", "de 20 W"),
@@ -708,19 +710,19 @@ def build_products():
                      ("Cubo de 20 W", "close-up of the white power adapter"),
                      ("Case de regalo", "close-up of the plain nude-pink protective case")],
             hero=f"all four items together: {ear}, the white 20 W adapter, the coiled white cable and a plain nude-pink case",
-            price=p["precio"], cta="PIDE HOY", nota=f"{ENVIO} {DISCLOSURE_PRO3}")),
+            price=p["precio"], cta="PIDE HOY", nota=f"{ENVIO} {CALIDAD_PRO3}.")),
         "T4": dict(refs=[r_ear, r_cases, r_cubo, r_cable], prompt=t4(
             badge="Envío gratis",
             hero=f"{ear} in a plain black protective case, with the white 20 W adapter and the coiled white cable beside it",
             title="Combo 4 en 1: audífonos, cubo, cable y case", price=p["precio"],
-            sub="Envío gratis a todo el Perú", nota=DISCLOSURE_PRO3)),
+            sub="Envío gratis a todo el Perú", nota=CALIDAD_PRO3)),
         "T5": dict(refs=[r_ear, r_cases, r_cubo, r_cable], prompt=t5(
             bg="muted terracotta", center=f"{ear}, the charging case in a plain steel-blue protective case",
             top="the white 20 W power adapter (Image 3), the coiled white USB-C cable (Image 4)",
             left="a matte water bottle", right="a black notebook, a leather card holder",
             bottom="a set of keys, black sunglasses, a phone lying screen-down without logos",
             l1="TODO PARA", l2="CARGAR Y ESCUCHAR", sub="Pro 3 + cubo original de 20 W + cable + case · S/ 219",
-            cta="PIDE HOY", under="ENVÍO GRATIS A TODO EL PERÚ", btn_color="terracotta", nota=DISCLOSURE_PRO3)),
+            cta="PIDE HOY", under="ENVÍO GRATIS A TODO EL PERÚ", btn_color="terracotta", nota=CALIDAD_PRO3)),
     }, dict(textos=["Combo 4 en 1 a S/ 219: Pro 3 Calidad Premium, cubo original de 20 W, cable a elección y case de regalo.",
                     "Envío gratis a Lima y provincia. Eliges cable USB-C a USB-C o a Lightning y el color de tu case.",
                     "Audífonos Pro 3 Calidad Premium compatibles, no originales de Apple. Pídelo por WhatsApp."],
@@ -739,7 +741,7 @@ def build_products():
             lower_visual="a top-down view of the two charging cases fitted in plain protective cases, one nude pink and "
                          "one steel blue (Image 2)",
             lower=[("3", "on the pink case", "Dos cases de regalo."), ("4", "on the blue case", "Un color para cada uno.")],
-            price=p["precio"], cta="PIDE HOY", nota=f"{ENVIO} {DISCLOSURE_PRO3}")),
+            price=p["precio"], cta="PIDE HOY", nota=f"{ENVIO} {CALIDAD_PRO3}.")),
         "T2": dict(refs=[r_ear, r_cases], prompt=t2(
             scene=f"{two}, one charging case in a plain black protective case and the other in a plain lilac one, "
                   "placed symmetrically",
@@ -747,24 +749,24 @@ def build_products():
             captions=[("2 pro 3 calidad premium.", "upper left, with a line going down to the earbuds"),
                       ("2 cases de regalo.", "upper right, with an L-shaped line pointing to the cases"),
                       ("envío gratis a todo el perú.", "lower center, with a vertical line between both sets")],
-            price=p["precio"], cta="PIDE HOY", btn_color="dark gray", nota=DISCLOSURE_PRO3)),
+            price=p["precio"], cta="PIDE HOY", btn_color="dark gray", nota=CALIDAD_PRO3)),
         "T3": dict(refs=[r_ear, r_cases], prompt=t3(
             h="COMBO 2×1.",
             icons=[("earbuds icon", "2 audífonos", "Pro 3"), ("gift icon", "2 cases", "de regalo"), ("truck icon", "Envío", "gratis")],
             circles=[("Estuche de carga", "close-up of an open charging case with earbuds"),
                      ("Case rosa nude", "close-up of the plain nude-pink case"), ("Case azul acero", "close-up of the plain steel-blue case")],
             hero=f"{two}, standing side by side, one in a plain nude-pink case and one in a plain steel-blue case",
-            price=p["precio"], cta="PIDE HOY", nota=DISCLOSURE_PRO3)),
+            price=p["precio"], cta="PIDE HOY", nota=CALIDAD_PRO3)),
         "T4": dict(refs=[r_ear, r_cases], prompt=t4(
             badge="Para compartir", hero=f"{two}, one in a plain gray case and one in a plain lilac case",
             title="Combo 2×1: dos Pro 3 y dos cases", price=p["precio"], sub="Envío gratis a todo el Perú",
-            nota=DISCLOSURE_PRO3)),
+            nota=CALIDAD_PRO3)),
         "T5": dict(refs=[r_ear, r_cases], prompt=t5(
             bg="deep plum-gray", center=f"{two}, side by side, one in a plain nude-pink case and one in a plain steel-blue case",
             top="plain protective cases in black, gray and lilac (Image 2)", left="two matte water bottles",
             right="two small notebooks", bottom="two sets of keys, two pairs of sunglasses",
             l1="¿PARA TI", l2="Y PARA ALGUIEN MÁS?", sub="2 Pro 3 Calidad Premium + 2 cases de regalo · S/ 199",
-            cta="PIDE HOY", under="ENVÍO GRATIS A TODO EL PERÚ", btn_color="plum", nota=DISCLOSURE_PRO3)),
+            cta="PIDE HOY", under="ENVÍO GRATIS A TODO EL PERÚ", btn_color="plum", nota=CALIDAD_PRO3)),
     }, dict(textos=["Combo 2×1 a S/ 199: dos Pro 3 Calidad Premium, cada uno con su cable y su case de regalo.",
                     "Uno para ti y otro para compartir. Elige un color de case para cada uno. Envío gratis a todo el Perú.",
                     "Audífonos Pro 3 Calidad Premium compatibles, no originales de Apple. Pídelo por WhatsApp."],

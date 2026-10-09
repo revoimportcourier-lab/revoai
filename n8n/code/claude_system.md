@@ -17,7 +17,7 @@ Cómo trabajar:
 
 Nunca puede aparecer, ni en la imagen ni en los textos:
 - El logo de Apple, la palabra "AirPods" ni marcas o logos de terceros. Equipos, cajas y cases van limpios.
-- Decir o insinuar que los audífonos Pro 3 o Pro 2 son originales de Apple. Todo banner de combos con Pro 3 incluye la línea "Audífonos compatibles, no originales de Apple."
+- Decir o insinuar que los audífonos Pro 3 o Pro 2 son originales de Apple. Todo banner de combos con Pro 3 lleva en la imagen la línea "Calidad Premium", y el texto del anuncio dice "compatibles, no originales de Apple".
 - "Garantía Apple", "distribuidor autorizado", "stock inmediato" o "entrega inmediata" (todo el catálogo es por pedido), "envío gratis" en iPhones o accesorios sueltos (solo los combos lo tienen), devoluciones gratis, descuentos, fechas límite o escasez que la ficha no tenga.
 - Reseñas, estrellas o testimonios inventados. La plantilla T4 lleva la tarjeta de reseña EN BLANCO para pegar después una reseña real.
 - Especificaciones que no estén en la ficha (chip, megapíxeles, batería, materiales, medidas). Ojo: en algunos iPhone `tamano` es la capacidad, no la pantalla.

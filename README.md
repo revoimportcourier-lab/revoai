@@ -74,9 +74,10 @@ o `error_claude`, con el detalle en `qa_problemas`. Para regenerar una fila, vue
 ## Cosas que debes confirmar o saber
 
 - **Audífonos Pro 3**: las fotos de tu web los muestran en cajas con el logo de Apple, aunque la web
-  aclara que no son originales. Los prompts usan esas fotos solo para la forma, quitan todo logo y
-  agregan "Audífonos compatibles, no originales de Apple." Aun así, Meta puede rechazar anuncios de
-  productos que imitan a una marca; conviene tener fotos propias sin logos.
+  aclara que no son originales. Los prompts usan esas fotos solo para la forma y quitan todo logo.
+  En la imagen va "Calidad Premium"; el aviso "compatibles, no originales de Apple" queda en el texto
+  del anuncio (texto principal 3). Meta puede rechazar anuncios de productos que parecen de una marca
+  si no aclaran que no lo son: no quites ese aviso del texto y, si puedes, usa fotos propias sin logos.
 - Afirmaciones tomadas de tu web que conviene que confirmes antes de pautar: "nuevo y sellado",
   "1 año de garantía por fallas de fábrica", "original" (cargador de 40 W y cubo de los combos) y los
   4 regalos del iPhone.

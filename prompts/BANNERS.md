@@ -3061,7 +3061,7 @@ Link: https://revoimport.com/p/combo-pro-3-a1/
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: LO QUE TRAE TU COMBO PRO 3 · 1  Audífonos Pro 3 Calidad Premium. · 2  Estuche de carga. · 3  Case de regalo. · 4  Cable USB-C a USB-C. · 5  6 colores para elegir. · S/ 119 · PIDE HOY · Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: LO QUE TRAE TU COMBO PRO 3 · 1  Audífonos Pro 3 Calidad Premium. · 2  Estuche de carga. · 3  Case de regalo. · 4  Cable USB-C a USB-C. · 5  6 colores para elegir. · S/ 119 · PIDE HOY · Envío gratis a todo el Perú. Calidad Premium.
 
 **Prompt master 3:4 (Feed)**
 
@@ -3076,7 +3076,7 @@ Lower panel: a second rounded light-gray card. On the left, a top-down view of t
 
 Above the button, centered: large bold black price text "S/ 119"
 Bottom: a full-width black rounded-rectangle button with bold white all-caps text "PIDE HOY"
-Under the button, one line of small gray text: "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple."
+Under the button, one line of small gray text: "Envío gratis a todo el Perú. Calidad Premium."
 
 Soft diffused studio lighting, realistic materials and reflections, sharp e-commerce product photography, clean technical infographic aesthetic.
 
@@ -3090,7 +3090,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "LO QUE TRAE TU COMBO PRO 3"; "1  Audífonos Pro 3 Calidad Premium."; "2  Estuche de carga."; "3  Case de regalo."; "4  Cable USB-C a USB-C."; "5  6 colores para elegir."; "S/ 119"; "PIDE HOY"; "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "LO QUE TRAE TU COMBO PRO 3"; "1  Audífonos Pro 3 Calidad Premium."; "2  Estuche de carga."; "3  Case de regalo."; "4  Cable USB-C a USB-C."; "5  6 colores para elegir."; "S/ 119"; "PIDE HOY"; "Envío gratis a todo el Perú. Calidad Premium.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3100,7 +3100,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "LO QUE TRAE TU COMBO PRO 3"; "1  Audífonos Pro 3 Calidad Premium."; "2  Estuche de carga."; "3  Case de regalo."; "4  Cable USB-C a USB-C."; "5  6 colores para elegir."; "S/ 119"; "PIDE HOY"; "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "LO QUE TRAE TU COMBO PRO 3"; "1  Audífonos Pro 3 Calidad Premium."; "2  Estuche de carga."; "3  Case de regalo."; "4  Cable USB-C a USB-C."; "5  6 colores para elegir."; "S/ 119"; "PIDE HOY"; "Envío gratis a todo el Perú. Calidad Premium.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3111,7 +3111,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: TU COMBO PRO 3 · A S/ 119 · audífonos + cable + case. · 6 colores de case. · envío gratis a todo el perú. · PIDE HOY · Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: TU COMBO PRO 3 · A S/ 119 · audífonos + cable + case. · 6 colores de case. · envío gratis a todo el perú. · PIDE HOY · Calidad Premium
 
 **Prompt master 3:4 (Feed)**
 
@@ -3122,7 +3122,7 @@ Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Top, centered, large all-caps headline in two lines: "TU COMBO PRO 3" / "A S/ 119"
 - Three small lowercase callout captions with thin white 1px leader lines pointing at the product: "audífonos + cable + case." upper left, with a line going down to the earbuds; "6 colores de case." upper right, with an L-shaped line pointing to the fanned cases; "envío gratis a todo el perú." lower center, with a vertical line from the cable.
 - Bottom center: a white rounded-rectangle button with gray bold all-caps text "PIDE HOY"
-- Under the button, one line of small white text: "Audífonos compatibles, no originales de Apple."
+- Under the button, one line of small white text: "Calidad Premium"
 
 Clean layout, generous negative space, modern e-commerce ad aesthetic.
 
@@ -3136,7 +3136,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU COMBO PRO 3"; "A S/ 119"; "audífonos + cable + case."; "6 colores de case."; "envío gratis a todo el perú."; "PIDE HOY"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU COMBO PRO 3"; "A S/ 119"; "audífonos + cable + case."; "6 colores de case."; "envío gratis a todo el perú."; "PIDE HOY"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3146,7 +3146,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU COMBO PRO 3"; "A S/ 119"; "audífonos + cable + case."; "6 colores de case."; "envío gratis a todo el perú."; "PIDE HOY"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU COMBO PRO 3"; "A S/ 119"; "audífonos + cable + case."; "6 colores de case."; "envío gratis a todo el perú."; "PIDE HOY"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3157,7 +3157,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: COMBO PRO 3. · Audífonos · Pro 3 · Cable USB-C · a USB-C · Case de · regalo · Estuche de carga · Case de regalo · S/ 119 · PIDE HOY · Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: COMBO PRO 3. · Audífonos · Pro 3 · Cable USB-C · a USB-C · Case de · regalo · Estuche de carga · Case de regalo · S/ 119 · PIDE HOY · Envío gratis a todo el Perú. Calidad Premium.
 
 **Prompt master 3:4 (Feed)**
 
@@ -3180,7 +3180,7 @@ Main area: a large studio hero shot of a pair of white in-ear wireless earbuds w
 
 Above the button, centered: large bold black price text "S/ 119"
 Bottom: a wide outlined button with thin black border, rounded corners, white fill and bold black all-caps text "PIDE HOY"
-Under the button, one line of small gray text: "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple."
+Under the button, one line of small gray text: "Envío gratis a todo el Perú. Calidad Premium."
 
 Soft diffused studio lighting, realistic textures, sharp high-end product photography, clean technical spec-sheet aesthetic.
 
@@ -3194,7 +3194,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO PRO 3."; "Audífonos"; "Pro 3"; "Cable USB-C"; "a USB-C"; "Case de"; "regalo"; "Estuche de carga"; "Case de regalo"; "S/ 119"; "PIDE HOY"; "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO PRO 3."; "Audífonos"; "Pro 3"; "Cable USB-C"; "a USB-C"; "Case de"; "regalo"; "Estuche de carga"; "Case de regalo"; "S/ 119"; "PIDE HOY"; "Envío gratis a todo el Perú. Calidad Premium.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3204,7 +3204,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO PRO 3."; "Audífonos"; "Pro 3"; "Cable USB-C"; "a USB-C"; "Case de"; "regalo"; "Estuche de carga"; "Case de regalo"; "S/ 119"; "PIDE HOY"; "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO PRO 3."; "Audífonos"; "Pro 3"; "Cable USB-C"; "a USB-C"; "Case de"; "regalo"; "Estuche de carga"; "Case de regalo"; "S/ 119"; "PIDE HOY"; "Envío gratis a todo el Perú. Calidad Premium.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3215,7 +3215,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: Ahorra S/ 25 · Combo Pro 3: audífonos, cable y case · S/ 144 · S/ 119 · Envío gratis a todo el Perú · Pagas al recibir · Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: Ahorra S/ 25 · Combo Pro 3: audífonos, cable y case · S/ 144 · S/ 119 · Envío gratis a todo el Perú · Pagas al recibir · Calidad Premium
 
 > Lleva una tarjeta de reseña en blanco: complétala con una reseña real de un cliente (con su permiso) antes de publicar. No inventes reseñas ni estrellas.
 
@@ -3232,7 +3232,7 @@ Below the product, centered text block:
 - bold black sentence-case title "Combo Pro 3: audífonos, cable y case"
 - price line: old price "S/ 144" in large bold gray with a strikethrough, next to the new price "S/ 119" in large bold dark navy blue
 - regular black text "Envío gratis a todo el Perú · Pagas al recibir"
-- one line of small gray text "Audífonos compatibles, no originales de Apple."
+- one line of small gray text "Calidad Premium"
 
 Bottom: a white rounded-rectangle card with a thin black outline, laid out as a customer review template: a row of five orange-yellow stars with small gray 5/5, an empty area for a quote, and below it a light-blue circular avatar plus an empty name line and an empty small gray line. Leave the quote, the avatar initials and the name completely blank for a real customer review to be added later.
 
@@ -3248,7 +3248,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "Ahorra S/ 25"; "Combo Pro 3: audífonos, cable y case"; "S/ 144"; "S/ 119"; "Envío gratis a todo el Perú · Pagas al recibir"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "Ahorra S/ 25"; "Combo Pro 3: audífonos, cable y case"; "S/ 144"; "S/ 119"; "Envío gratis a todo el Perú · Pagas al recibir"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3258,7 +3258,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "Ahorra S/ 25"; "Combo Pro 3: audífonos, cable y case"; "S/ 144"; "S/ 119"; "Envío gratis a todo el Perú · Pagas al recibir"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "Ahorra S/ 25"; "Combo Pro 3: audífonos, cable y case"; "S/ 144"; "S/ 119"; "Envío gratis a todo el Perú · Pagas al recibir"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3269,7 +3269,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: ¿AUDÍFONOS NUEVOS · POR S/ 119? · Pro 3 Calidad Premium + cable + case de regalo · PIDE HOY · ENVÍO GRATIS A TODO EL PERÚ · Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: ¿AUDÍFONOS NUEVOS · POR S/ 119? · Pro 3 Calidad Premium + cable + case de regalo · PIDE HOY · ENVÍO GRATIS A TODO EL PERÚ · Calidad Premium
 
 **Prompt master 3:4 (Feed)**
 
@@ -3289,7 +3289,7 @@ Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Below it, a smaller sentence-case subline: "Pro 3 Calidad Premium + cable + case de regalo"
 - Bottom center: a white rounded-rectangle button with navy bold all-caps text "PIDE HOY"
 - Under the button, small white all-caps text: "ENVÍO GRATIS A TODO EL PERÚ"
-- Under that, one line of very small white text: "Audífonos compatibles, no originales de Apple."
+- Under that, one line of very small white text: "Calidad Premium"
 
 Generous negative space, balanced symmetric layout, modern minimalist ad aesthetic.
 
@@ -3303,7 +3303,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "¿AUDÍFONOS NUEVOS"; "POR S/ 119?"; "Pro 3 Calidad Premium + cable + case de regalo"; "PIDE HOY"; "ENVÍO GRATIS A TODO EL PERÚ"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "¿AUDÍFONOS NUEVOS"; "POR S/ 119?"; "Pro 3 Calidad Premium + cable + case de regalo"; "PIDE HOY"; "ENVÍO GRATIS A TODO EL PERÚ"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3313,7 +3313,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "¿AUDÍFONOS NUEVOS"; "POR S/ 119?"; "Pro 3 Calidad Premium + cable + case de regalo"; "PIDE HOY"; "ENVÍO GRATIS A TODO EL PERÚ"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "¿AUDÍFONOS NUEVOS"; "POR S/ 119?"; "Pro 3 Calidad Premium + cable + case de regalo"; "PIDE HOY"; "ENVÍO GRATIS A TODO EL PERÚ"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3339,7 +3339,7 @@ Link: https://revoimport.com/p/combo-pro-3-4en1/
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>, <https://revoimport.com/assets/revo/accessories/cargador-20w.png>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: COMBO PRO 3 · 4 EN 1 · 1  Audífonos Pro 3 Calidad Premium. · 2  Estuche de carga. · 3  Cubo original de 20 W. · 4  Cable a elección. · 5  Case de regalo. · S/ 219 · PIDE HOY · Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: COMBO PRO 3 · 4 EN 1 · 1  Audífonos Pro 3 Calidad Premium. · 2  Estuche de carga. · 3  Cubo original de 20 W. · 4  Cable a elección. · 5  Case de regalo. · S/ 219 · PIDE HOY · Envío gratis a todo el Perú. Calidad Premium.
 
 **Prompt master 3:4 (Feed)**
 
@@ -3354,7 +3354,7 @@ Lower panel: a second rounded light-gray card. On the left, a top-down view of t
 
 Above the button, centered: large bold black price text "S/ 219"
 Bottom: a full-width black rounded-rectangle button with bold white all-caps text "PIDE HOY"
-Under the button, one line of small gray text: "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple."
+Under the button, one line of small gray text: "Envío gratis a todo el Perú. Calidad Premium."
 
 Soft diffused studio lighting, realistic materials and reflections, sharp e-commerce product photography, clean technical infographic aesthetic.
 
@@ -3368,7 +3368,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO PRO 3 · 4 EN 1"; "1  Audífonos Pro 3 Calidad Premium."; "2  Estuche de carga."; "3  Cubo original de 20 W."; "4  Cable a elección."; "5  Case de regalo."; "S/ 219"; "PIDE HOY"; "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO PRO 3 · 4 EN 1"; "1  Audífonos Pro 3 Calidad Premium."; "2  Estuche de carga."; "3  Cubo original de 20 W."; "4  Cable a elección."; "5  Case de regalo."; "S/ 219"; "PIDE HOY"; "Envío gratis a todo el Perú. Calidad Premium.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3378,7 +3378,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO PRO 3 · 4 EN 1"; "1  Audífonos Pro 3 Calidad Premium."; "2  Estuche de carga."; "3  Cubo original de 20 W."; "4  Cable a elección."; "5  Case de regalo."; "S/ 219"; "PIDE HOY"; "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO PRO 3 · 4 EN 1"; "1  Audífonos Pro 3 Calidad Premium."; "2  Estuche de carga."; "3  Cubo original de 20 W."; "4  Cable a elección."; "5  Case de regalo."; "S/ 219"; "PIDE HOY"; "Envío gratis a todo el Perú. Calidad Premium.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3389,7 +3389,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>, <https://revoimport.com/assets/revo/accessories/cargador-20w.png>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: CARGA Y ESCUCHA · EN UN SOLO COMBO · cubo original de 20 w. · cable a elección. · case de regalo. · S/ 219 · PIDE HOY · Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: CARGA Y ESCUCHA · EN UN SOLO COMBO · cubo original de 20 w. · cable a elección. · case de regalo. · S/ 219 · PIDE HOY · Envío gratis a todo el Perú. Calidad Premium.
 
 **Prompt master 3:4 (Feed)**
 
@@ -3401,7 +3401,7 @@ Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Three small lowercase callout captions with thin white 1px leader lines pointing at the product: "cubo original de 20 w." upper left, with a line going down to the adapter; "cable a elección." upper right, with an L-shaped line pointing to the cable; "case de regalo." lower center, with a vertical line from the case.
 - Just above the button, centered: bold white price text "S/ 219"
 - Bottom center: a white rounded-rectangle button with gray bold all-caps text "PIDE HOY"
-- Under the button, one line of small white text: "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple."
+- Under the button, one line of small white text: "Envío gratis a todo el Perú. Calidad Premium."
 
 Clean layout, generous negative space, modern e-commerce ad aesthetic.
 
@@ -3415,7 +3415,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "CARGA Y ESCUCHA"; "EN UN SOLO COMBO"; "cubo original de 20 w."; "cable a elección."; "case de regalo."; "S/ 219"; "PIDE HOY"; "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "CARGA Y ESCUCHA"; "EN UN SOLO COMBO"; "cubo original de 20 w."; "cable a elección."; "case de regalo."; "S/ 219"; "PIDE HOY"; "Envío gratis a todo el Perú. Calidad Premium.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3425,7 +3425,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "CARGA Y ESCUCHA"; "EN UN SOLO COMBO"; "cubo original de 20 w."; "cable a elección."; "case de regalo."; "S/ 219"; "PIDE HOY"; "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "CARGA Y ESCUCHA"; "EN UN SOLO COMBO"; "cubo original de 20 w."; "cable a elección."; "case de regalo."; "S/ 219"; "PIDE HOY"; "Envío gratis a todo el Perú. Calidad Premium.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3436,7 +3436,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>, <https://revoimport.com/assets/revo/accessories/cargador-20w.png>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: COMBO 4 EN 1. · Audífonos · Pro 3 · 20 W · Cubo original · de 20 W · Cable a · elección · Estuche de carga · Cubo de 20 W · Case de regalo · S/ 219 · PIDE HOY · Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: COMBO 4 EN 1. · Audífonos · Pro 3 · 20 W · Cubo original · de 20 W · Cable a · elección · Estuche de carga · Cubo de 20 W · Case de regalo · S/ 219 · PIDE HOY · Envío gratis a todo el Perú. Calidad Premium.
 
 **Prompt master 3:4 (Feed)**
 
@@ -3459,7 +3459,7 @@ Main area: a large studio hero shot of all four items together: a pair of white 
 
 Above the button, centered: large bold black price text "S/ 219"
 Bottom: a wide outlined button with thin black border, rounded corners, white fill and bold black all-caps text "PIDE HOY"
-Under the button, one line of small gray text: "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple."
+Under the button, one line of small gray text: "Envío gratis a todo el Perú. Calidad Premium."
 
 Soft diffused studio lighting, realistic textures, sharp high-end product photography, clean technical spec-sheet aesthetic.
 
@@ -3473,7 +3473,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO 4 EN 1."; "Audífonos"; "Pro 3"; "20 W"; "Cubo original"; "de 20 W"; "Cable a"; "elección"; "Estuche de carga"; "Cubo de 20 W"; "Case de regalo"; "S/ 219"; "PIDE HOY"; "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO 4 EN 1."; "Audífonos"; "Pro 3"; "20 W"; "Cubo original"; "de 20 W"; "Cable a"; "elección"; "Estuche de carga"; "Cubo de 20 W"; "Case de regalo"; "S/ 219"; "PIDE HOY"; "Envío gratis a todo el Perú. Calidad Premium.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3483,7 +3483,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO 4 EN 1."; "Audífonos"; "Pro 3"; "20 W"; "Cubo original"; "de 20 W"; "Cable a"; "elección"; "Estuche de carga"; "Cubo de 20 W"; "Case de regalo"; "S/ 219"; "PIDE HOY"; "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO 4 EN 1."; "Audífonos"; "Pro 3"; "20 W"; "Cubo original"; "de 20 W"; "Cable a"; "elección"; "Estuche de carga"; "Cubo de 20 W"; "Case de regalo"; "S/ 219"; "PIDE HOY"; "Envío gratis a todo el Perú. Calidad Premium.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3494,7 +3494,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>, <https://revoimport.com/assets/revo/accessories/cargador-20w.png>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: Envío gratis · Combo 4 en 1: audífonos, cubo, cable y case · S/ 219 · Envío gratis a todo el Perú · Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: Envío gratis · Combo 4 en 1: audífonos, cubo, cable y case · S/ 219 · Envío gratis a todo el Perú · Calidad Premium
 
 > Lleva una tarjeta de reseña en blanco: complétala con una reseña real de un cliente (con su permiso) antes de publicar. No inventes reseñas ni estrellas.
 
@@ -3511,7 +3511,7 @@ Below the product, centered text block:
 - bold black sentence-case title "Combo 4 en 1: audífonos, cubo, cable y case"
 - price line: "S/ 219" in large bold dark navy blue
 - regular black text "Envío gratis a todo el Perú"
-- one line of small gray text "Audífonos compatibles, no originales de Apple."
+- one line of small gray text "Calidad Premium"
 
 Bottom: a white rounded-rectangle card with a thin black outline, laid out as a customer review template: a row of five orange-yellow stars with small gray 5/5, an empty area for a quote, and below it a light-blue circular avatar plus an empty name line and an empty small gray line. Leave the quote, the avatar initials and the name completely blank for a real customer review to be added later.
 
@@ -3527,7 +3527,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "Envío gratis"; "Combo 4 en 1: audífonos, cubo, cable y case"; "S/ 219"; "Envío gratis a todo el Perú"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "Envío gratis"; "Combo 4 en 1: audífonos, cubo, cable y case"; "S/ 219"; "Envío gratis a todo el Perú"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3537,7 +3537,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "Envío gratis"; "Combo 4 en 1: audífonos, cubo, cable y case"; "S/ 219"; "Envío gratis a todo el Perú"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "Envío gratis"; "Combo 4 en 1: audífonos, cubo, cable y case"; "S/ 219"; "Envío gratis a todo el Perú"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3548,7 +3548,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>, <https://revoimport.com/assets/revo/accessories/cargador-20w.png>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: TODO PARA · CARGAR Y ESCUCHAR · Pro 3 + cubo original de 20 W + cable + case · S/ 219 · PIDE HOY · ENVÍO GRATIS A TODO EL PERÚ · Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: TODO PARA · CARGAR Y ESCUCHAR · Pro 3 + cubo original de 20 W + cable + case · S/ 219 · PIDE HOY · ENVÍO GRATIS A TODO EL PERÚ · Calidad Premium
 
 **Prompt master 3:4 (Feed)**
 
@@ -3568,7 +3568,7 @@ Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Below it, a smaller sentence-case subline: "Pro 3 + cubo original de 20 W + cable + case · S/ 219"
 - Bottom center: a white rounded-rectangle button with terracotta bold all-caps text "PIDE HOY"
 - Under the button, small white all-caps text: "ENVÍO GRATIS A TODO EL PERÚ"
-- Under that, one line of very small white text: "Audífonos compatibles, no originales de Apple."
+- Under that, one line of very small white text: "Calidad Premium"
 
 Generous negative space, balanced symmetric layout, modern minimalist ad aesthetic.
 
@@ -3582,7 +3582,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TODO PARA"; "CARGAR Y ESCUCHAR"; "Pro 3 + cubo original de 20 W + cable + case · S/ 219"; "PIDE HOY"; "ENVÍO GRATIS A TODO EL PERÚ"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TODO PARA"; "CARGAR Y ESCUCHAR"; "Pro 3 + cubo original de 20 W + cable + case · S/ 219"; "PIDE HOY"; "ENVÍO GRATIS A TODO EL PERÚ"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3592,7 +3592,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TODO PARA"; "CARGAR Y ESCUCHAR"; "Pro 3 + cubo original de 20 W + cable + case · S/ 219"; "PIDE HOY"; "ENVÍO GRATIS A TODO EL PERÚ"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TODO PARA"; "CARGAR Y ESCUCHAR"; "Pro 3 + cubo original de 20 W + cable + case · S/ 219"; "PIDE HOY"; "ENVÍO GRATIS A TODO EL PERÚ"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3618,7 +3618,7 @@ Link: https://revoimport.com/p/combo-pro-3-2x1/
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>
 
-Textos exactos en la imagen: COMBO PRO 3 · 2×1 · 1  Dos Pro 3 Calidad Premium. · 2  Dos estuches de carga. · 3  Dos cases de regalo. · 4  Un color para cada uno. · S/ 199 · PIDE HOY · Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: COMBO PRO 3 · 2×1 · 1  Dos Pro 3 Calidad Premium. · 2  Dos estuches de carga. · 3  Dos cases de regalo. · 4  Un color para cada uno. · S/ 199 · PIDE HOY · Envío gratis a todo el Perú. Calidad Premium.
 
 **Prompt master 3:4 (Feed)**
 
@@ -3633,7 +3633,7 @@ Lower panel: a second rounded light-gray card. On the left, a top-down view of t
 
 Above the button, centered: large bold black price text "S/ 199"
 Bottom: a full-width black rounded-rectangle button with bold white all-caps text "PIDE HOY"
-Under the button, one line of small gray text: "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple."
+Under the button, one line of small gray text: "Envío gratis a todo el Perú. Calidad Premium."
 
 Soft diffused studio lighting, realistic materials and reflections, sharp e-commerce product photography, clean technical infographic aesthetic.
 
@@ -3647,7 +3647,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO PRO 3 · 2×1"; "1  Dos Pro 3 Calidad Premium."; "2  Dos estuches de carga."; "3  Dos cases de regalo."; "4  Un color para cada uno."; "S/ 199"; "PIDE HOY"; "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO PRO 3 · 2×1"; "1  Dos Pro 3 Calidad Premium."; "2  Dos estuches de carga."; "3  Dos cases de regalo."; "4  Un color para cada uno."; "S/ 199"; "PIDE HOY"; "Envío gratis a todo el Perú. Calidad Premium.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3657,7 +3657,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO PRO 3 · 2×1"; "1  Dos Pro 3 Calidad Premium."; "2  Dos estuches de carga."; "3  Dos cases de regalo."; "4  Un color para cada uno."; "S/ 199"; "PIDE HOY"; "Envío gratis a todo el Perú. Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO PRO 3 · 2×1"; "1  Dos Pro 3 Calidad Premium."; "2  Dos estuches de carga."; "3  Dos cases de regalo."; "4  Un color para cada uno."; "S/ 199"; "PIDE HOY"; "Envío gratis a todo el Perú. Calidad Premium.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3668,7 +3668,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>
 
-Textos exactos en la imagen: UNO PARA TI, · OTRO PARA COMPARTIR · 2 pro 3 calidad premium. · 2 cases de regalo. · envío gratis a todo el perú. · S/ 199 · PIDE HOY · Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: UNO PARA TI, · OTRO PARA COMPARTIR · 2 pro 3 calidad premium. · 2 cases de regalo. · envío gratis a todo el perú. · S/ 199 · PIDE HOY · Calidad Premium
 
 **Prompt master 3:4 (Feed)**
 
@@ -3680,7 +3680,7 @@ Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Three small lowercase callout captions with thin white 1px leader lines pointing at the product: "2 pro 3 calidad premium." upper left, with a line going down to the earbuds; "2 cases de regalo." upper right, with an L-shaped line pointing to the cases; "envío gratis a todo el perú." lower center, with a vertical line between both sets.
 - Just above the button, centered: bold white price text "S/ 199"
 - Bottom center: a white rounded-rectangle button with dark gray bold all-caps text "PIDE HOY"
-- Under the button, one line of small white text: "Audífonos compatibles, no originales de Apple."
+- Under the button, one line of small white text: "Calidad Premium"
 
 Clean layout, generous negative space, modern e-commerce ad aesthetic.
 
@@ -3694,7 +3694,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "UNO PARA TI,"; "OTRO PARA COMPARTIR"; "2 pro 3 calidad premium."; "2 cases de regalo."; "envío gratis a todo el perú."; "S/ 199"; "PIDE HOY"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "UNO PARA TI,"; "OTRO PARA COMPARTIR"; "2 pro 3 calidad premium."; "2 cases de regalo."; "envío gratis a todo el perú."; "S/ 199"; "PIDE HOY"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3704,7 +3704,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "UNO PARA TI,"; "OTRO PARA COMPARTIR"; "2 pro 3 calidad premium."; "2 cases de regalo."; "envío gratis a todo el perú."; "S/ 199"; "PIDE HOY"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "UNO PARA TI,"; "OTRO PARA COMPARTIR"; "2 pro 3 calidad premium."; "2 cases de regalo."; "envío gratis a todo el perú."; "S/ 199"; "PIDE HOY"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3715,7 +3715,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>
 
-Textos exactos en la imagen: COMBO 2×1. · 2 audífonos · Pro 3 · 2 cases · de regalo · Envío · gratis · Estuche de carga · Case rosa nude · Case azul acero · S/ 199 · PIDE HOY · Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: COMBO 2×1. · 2 audífonos · Pro 3 · 2 cases · de regalo · Envío · gratis · Estuche de carga · Case rosa nude · Case azul acero · S/ 199 · PIDE HOY · Calidad Premium
 
 **Prompt master 3:4 (Feed)**
 
@@ -3738,7 +3738,7 @@ Main area: a large studio hero shot of two identical sets of white in-ear wirele
 
 Above the button, centered: large bold black price text "S/ 199"
 Bottom: a wide outlined button with thin black border, rounded corners, white fill and bold black all-caps text "PIDE HOY"
-Under the button, one line of small gray text: "Audífonos compatibles, no originales de Apple."
+Under the button, one line of small gray text: "Calidad Premium"
 
 Soft diffused studio lighting, realistic textures, sharp high-end product photography, clean technical spec-sheet aesthetic.
 
@@ -3752,7 +3752,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO 2×1."; "2 audífonos"; "Pro 3"; "2 cases"; "de regalo"; "Envío"; "gratis"; "Estuche de carga"; "Case rosa nude"; "Case azul acero"; "S/ 199"; "PIDE HOY"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO 2×1."; "2 audífonos"; "Pro 3"; "2 cases"; "de regalo"; "Envío"; "gratis"; "Estuche de carga"; "Case rosa nude"; "Case azul acero"; "S/ 199"; "PIDE HOY"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3762,7 +3762,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO 2×1."; "2 audífonos"; "Pro 3"; "2 cases"; "de regalo"; "Envío"; "gratis"; "Estuche de carga"; "Case rosa nude"; "Case azul acero"; "S/ 199"; "PIDE HOY"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "COMBO 2×1."; "2 audífonos"; "Pro 3"; "2 cases"; "de regalo"; "Envío"; "gratis"; "Estuche de carga"; "Case rosa nude"; "Case azul acero"; "S/ 199"; "PIDE HOY"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3773,7 +3773,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>
 
-Textos exactos en la imagen: Para compartir · Combo 2×1: dos Pro 3 y dos cases · S/ 199 · Envío gratis a todo el Perú · Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: Para compartir · Combo 2×1: dos Pro 3 y dos cases · S/ 199 · Envío gratis a todo el Perú · Calidad Premium
 
 > Lleva una tarjeta de reseña en blanco: complétala con una reseña real de un cliente (con su permiso) antes de publicar. No inventes reseñas ni estrellas.
 
@@ -3790,7 +3790,7 @@ Below the product, centered text block:
 - bold black sentence-case title "Combo 2×1: dos Pro 3 y dos cases"
 - price line: "S/ 199" in large bold dark navy blue
 - regular black text "Envío gratis a todo el Perú"
-- one line of small gray text "Audífonos compatibles, no originales de Apple."
+- one line of small gray text "Calidad Premium"
 
 Bottom: a white rounded-rectangle card with a thin black outline, laid out as a customer review template: a row of five orange-yellow stars with small gray 5/5, an empty area for a quote, and below it a light-blue circular avatar plus an empty name line and an empty small gray line. Leave the quote, the avatar initials and the name completely blank for a real customer review to be added later.
 
@@ -3806,7 +3806,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "Para compartir"; "Combo 2×1: dos Pro 3 y dos cases"; "S/ 199"; "Envío gratis a todo el Perú"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "Para compartir"; "Combo 2×1: dos Pro 3 y dos cases"; "S/ 199"; "Envío gratis a todo el Perú"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3816,7 +3816,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "Para compartir"; "Combo 2×1: dos Pro 3 y dos cases"; "S/ 199"; "Envío gratis a todo el Perú"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "Para compartir"; "Combo 2×1: dos Pro 3 y dos cases"; "S/ 199"; "Envío gratis a todo el Perú"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -3827,7 +3827,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp>, <https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png>
 
-Textos exactos en la imagen: ¿PARA TI · Y PARA ALGUIEN MÁS? · 2 Pro 3 Calidad Premium + 2 cases de regalo · S/ 199 · PIDE HOY · ENVÍO GRATIS A TODO EL PERÚ · Audífonos compatibles, no originales de Apple.
+Textos exactos en la imagen: ¿PARA TI · Y PARA ALGUIEN MÁS? · 2 Pro 3 Calidad Premium + 2 cases de regalo · S/ 199 · PIDE HOY · ENVÍO GRATIS A TODO EL PERÚ · Calidad Premium
 
 **Prompt master 3:4 (Feed)**
 
@@ -3847,7 +3847,7 @@ Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Below it, a smaller sentence-case subline: "2 Pro 3 Calidad Premium + 2 cases de regalo · S/ 199"
 - Bottom center: a white rounded-rectangle button with plum bold all-caps text "PIDE HOY"
 - Under the button, small white all-caps text: "ENVÍO GRATIS A TODO EL PERÚ"
-- Under that, one line of very small white text: "Audífonos compatibles, no originales de Apple."
+- Under that, one line of very small white text: "Calidad Premium"
 
 Generous negative space, balanced symmetric layout, modern minimalist ad aesthetic.
 
@@ -3861,7 +3861,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "¿PARA TI"; "Y PARA ALGUIEN MÁS?"; "2 Pro 3 Calidad Premium + 2 cases de regalo · S/ 199"; "PIDE HOY"; "ENVÍO GRATIS A TODO EL PERÚ"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "¿PARA TI"; "Y PARA ALGUIEN MÁS?"; "2 Pro 3 Calidad Premium + 2 cases de regalo · S/ 199"; "PIDE HOY"; "ENVÍO GRATIS A TODO EL PERÚ"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -3871,7 +3871,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "¿PARA TI"; "Y PARA ALGUIEN MÁS?"; "2 Pro 3 Calidad Premium + 2 cases de regalo · S/ 199"; "PIDE HOY"; "ENVÍO GRATIS A TODO EL PERÚ"; "Audífonos compatibles, no originales de Apple.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "¿PARA TI"; "Y PARA ALGUIEN MÁS?"; "2 Pro 3 Calidad Premium + 2 cases de regalo · S/ 199"; "PIDE HOY"; "ENVÍO GRATIS A TODO EL PERÚ"; "Calidad Premium". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
