@@ -58,3 +58,15 @@ Ya existe un prototipo hecho con 0 créditos (iPhone 17 Pro Max y COMBO PRO 3 en
 - Instalar el Pixel de Meta en revoimport.com para poder hacer anuncios de catálogo (Advantage+).
 - En Meta, apagar las mejoras automáticas de Advantage+ que recortan o tapan textos.
 - Fotos reales de la caja sellada y del video antes de pagar: hacen más creíble "Así compras".
+
+## Resultado de la prueba (12/10/2026)
+
+- Gasto: 11.25 créditos (3 escenarios a 2.75 y 2 fotos "Lujo ónix" a 1.5). El agrandado del case falló
+  en Higgsfield y no se cobró; no hizo falta porque la foto original alcanza. No se usó la reserva.
+- Salieron 21 banners (Vitrina ónix y marfil de iPhone 17 Pro Max, COMBO PRO 3 y case; Kit del COMBO PRO
+  3; Así compras en REVO) en 4:5, 9:16 y 1:1. Los 21 pasan el control: textos exactos, zona segura de
+  Reels, letra mínima y "Calidad Premium" solo donde el catálogo lo permite.
+- "Lujo ónix" de Marketing Studio se descarta: redibuja el producto (el iPhone salió con otro diseño y
+  con el logo de Apple). Gana pegar la foto real por código.
+- El Kit no usa las fotos de los cases porque traen impreso "For AP Pro3"; los 6 colores van como
+  círculos.

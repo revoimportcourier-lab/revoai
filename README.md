@@ -22,7 +22,8 @@ revoimport.com ──► Claude (copy y prompts) ──► Google Sheet ──�
 | `n8n/code/` | Código de cada nodo (para revisarlo o cambiarlo) |
 | `scripts/` | Regeneran la biblioteca y el workflow; `reels_safe.py` arma la versión Reels y `poner_resena.py` escribe una reseña real en la tarjeta T4 |
 | `resenas/` | Mensajes de WhatsApp para pedir reseñas y la tabla donde se anotan |
-| `docs/propuesta-banners-inteligentes.md` | Propuesta de banners con foto real y texto por código (prueba de 13 a 17 créditos) |
+| `docs/propuesta-banners-inteligentes.md` | Propuesta de banners con foto real y texto por código |
+| `scripts/banners_inteligentes.py`, `inteligentes/` | Banners inteligentes: escenario de Higgsfield + foto real de la web + texto por código (cambiar precio o texto cuesta 0) |
 
 ## Opción 1 · Usar los prompts directo en Higgsfield
 
