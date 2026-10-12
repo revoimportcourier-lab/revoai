@@ -13,7 +13,7 @@ Link: https://revoimport.com/p/iphone-18-pro-max/
 **Textos para Meta (súbelos como opciones múltiples del mismo anuncio)**
 
 - Texto principal 1: iPhone 18 Pro Max nuevo y sellado, 256 GB, a S/ 6,550. Te enviamos un video de tu equipo antes de pagar.
-- Texto principal 2: Elige Guinda, Celeste, Silver o Negro. Viene con 4 regalos y 1 año de garantía por fallas de fábrica.
+- Texto principal 2: Elige Guinda, Celeste, Silver o Negro. Viene con 4 regalos (sujetos a stock) y 1 año de garantía por fallas de fábrica.
 - Texto principal 3: En Lima pagas al recibir. A provincia también llegamos: coordinamos pago y envío por WhatsApp.
 - Títulos: iPhone 18 Pro Max a S/ 6,550 · Nuevo, sellado y con 4 regalos · Pagas al recibir en Lima
 - Descripción: Consulta disponibilidad
@@ -73,7 +73,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/apple/iphone-18-pro-max/guinda/guinda-1.webp>, <https://revoimport.com/assets/revo/accessories/case-iphone.webp>, <https://revoimport.com/assets/revo/accessories/mica-iphone.webp>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: TU IPHONE 18 PRO MAX · VIENE ACOMPAÑADO · nuevo y sellado. · case, mica y cable de regalo. · video de tu equipo antes de pagar. · S/ 6,550 · PIDE HOY
+Textos exactos en la imagen: TU IPHONE 18 PRO MAX · VIENE ACOMPAÑADO · nuevo y sellado. · case, mica y cable de regalo. · video de tu equipo antes de pagar. · S/ 6,550 · PIDE HOY · Regalos sujetos a disponibilidad.
 
 **Prompt master 3:4 (Feed)**
 
@@ -85,6 +85,7 @@ Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Three small lowercase callout captions with thin white 1px leader lines pointing at the product: "nuevo y sellado." upper left, with a line going down to the phone; "case, mica y cable de regalo." upper right, with an L-shaped line pointing to the gifts; "video de tu equipo antes de pagar." lower center, with a vertical line from the phone.
 - Just above the button, centered: bold white price text "S/ 6,550"
 - Bottom center: a white rounded-rectangle button with gray bold all-caps text "PIDE HOY"
+- Under the button, one line of small white text: "Regalos sujetos a disponibilidad."
 
 Clean layout, generous negative space, modern e-commerce ad aesthetic.
 
@@ -98,7 +99,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 18 PRO MAX"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "S/ 6,550"; "PIDE HOY". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 18 PRO MAX"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "S/ 6,550"; "PIDE HOY"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -108,7 +109,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 18 PRO MAX"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "S/ 6,550"; "PIDE HOY". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 18 PRO MAX"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "S/ 6,550"; "PIDE HOY"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -176,7 +177,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/apple/iphone-18-pro-max/guinda/guinda-1.webp>
 
-Textos exactos en la imagen: 4 regalos incluidos · iPhone 18 Pro Max nuevo y sellado · S/ 6,550 · Contraentrega en Lima · Envíos a todo el Perú
+Textos exactos en la imagen: 4 regalos incluidos · iPhone 18 Pro Max nuevo y sellado · S/ 6,550 · Contraentrega en Lima · Envíos a todo el Perú · Regalos sujetos a disponibilidad.
 
 > Lleva una tarjeta de reseña en blanco: complétala con una reseña real de un cliente (con su permiso) antes de publicar. No inventes reseñas ni estrellas.
 
@@ -193,6 +194,7 @@ Below the product, centered text block:
 - bold black sentence-case title "iPhone 18 Pro Max nuevo y sellado"
 - price line: "S/ 6,550" in large bold dark navy blue
 - regular black text "Contraentrega en Lima · Envíos a todo el Perú"
+- one line of small gray text "Regalos sujetos a disponibilidad."
 
 Bottom: a white rounded-rectangle card with a thin black outline, laid out as a customer review template: a row of five orange-yellow stars with small gray 5/5, an empty area for a quote, and below it a light-blue circular avatar plus an empty name line and an empty small gray line. Leave the quote, the avatar initials and the name completely blank for a real customer review to be added later.
 
@@ -208,7 +210,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 18 Pro Max nuevo y sellado"; "S/ 6,550"; "Contraentrega en Lima · Envíos a todo el Perú". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 18 Pro Max nuevo y sellado"; "S/ 6,550"; "Contraentrega en Lima · Envíos a todo el Perú"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -218,7 +220,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 18 Pro Max nuevo y sellado"; "S/ 6,550"; "Contraentrega en Lima · Envíos a todo el Perú". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 18 Pro Max nuevo y sellado"; "S/ 6,550"; "Contraentrega en Lima · Envíos a todo el Perú"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -288,7 +290,7 @@ Link: https://revoimport.com/p/iphone-18-pro/
 **Textos para Meta (súbelos como opciones múltiples del mismo anuncio)**
 
 - Texto principal 1: iPhone 18 Pro nuevo y sellado, 256 GB, a S/ 6,200. Te enviamos un video de tu equipo antes de pagar.
-- Texto principal 2: Elige Celeste, Guinda, Silver o Negro. Viene con 4 regalos y 1 año de garantía por fallas de fábrica.
+- Texto principal 2: Elige Celeste, Guinda, Silver o Negro. Viene con 4 regalos (sujetos a stock) y 1 año de garantía por fallas de fábrica.
 - Texto principal 3: En Lima pagas al recibir. A provincia también llegamos: coordinamos pago y envío por WhatsApp.
 - Títulos: iPhone 18 Pro a S/ 6,200 · Nuevo, sellado y con 4 regalos · Pagas al recibir en Lima
 - Descripción: Consulta disponibilidad
@@ -348,7 +350,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/apple/iphone-18-pro/celeste/1.webp>, <https://revoimport.com/assets/revo/accessories/case-iphone.webp>, <https://revoimport.com/assets/revo/accessories/mica-iphone.webp>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: TU IPHONE 18 PRO · VIENE ACOMPAÑADO · nuevo y sellado. · case, mica y cable de regalo. · video de tu equipo antes de pagar. · S/ 6,200 · PIDE HOY
+Textos exactos en la imagen: TU IPHONE 18 PRO · VIENE ACOMPAÑADO · nuevo y sellado. · case, mica y cable de regalo. · video de tu equipo antes de pagar. · S/ 6,200 · PIDE HOY · Regalos sujetos a disponibilidad.
 
 **Prompt master 3:4 (Feed)**
 
@@ -360,6 +362,7 @@ Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Three small lowercase callout captions with thin white 1px leader lines pointing at the product: "nuevo y sellado." upper left, with a line going down to the phone; "case, mica y cable de regalo." upper right, with an L-shaped line pointing to the gifts; "video de tu equipo antes de pagar." lower center, with a vertical line from the phone.
 - Just above the button, centered: bold white price text "S/ 6,200"
 - Bottom center: a white rounded-rectangle button with gray bold all-caps text "PIDE HOY"
+- Under the button, one line of small white text: "Regalos sujetos a disponibilidad."
 
 Clean layout, generous negative space, modern e-commerce ad aesthetic.
 
@@ -373,7 +376,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 18 PRO"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "S/ 6,200"; "PIDE HOY". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 18 PRO"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "S/ 6,200"; "PIDE HOY"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -383,7 +386,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 18 PRO"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "S/ 6,200"; "PIDE HOY". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 18 PRO"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "S/ 6,200"; "PIDE HOY"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -451,7 +454,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/apple/iphone-18-pro/celeste/1.webp>
 
-Textos exactos en la imagen: 4 regalos incluidos · iPhone 18 Pro nuevo y sellado · S/ 6,200 · Contraentrega en Lima · Envíos a todo el Perú
+Textos exactos en la imagen: 4 regalos incluidos · iPhone 18 Pro nuevo y sellado · S/ 6,200 · Contraentrega en Lima · Envíos a todo el Perú · Regalos sujetos a disponibilidad.
 
 > Lleva una tarjeta de reseña en blanco: complétala con una reseña real de un cliente (con su permiso) antes de publicar. No inventes reseñas ni estrellas.
 
@@ -468,6 +471,7 @@ Below the product, centered text block:
 - bold black sentence-case title "iPhone 18 Pro nuevo y sellado"
 - price line: "S/ 6,200" in large bold dark navy blue
 - regular black text "Contraentrega en Lima · Envíos a todo el Perú"
+- one line of small gray text "Regalos sujetos a disponibilidad."
 
 Bottom: a white rounded-rectangle card with a thin black outline, laid out as a customer review template: a row of five orange-yellow stars with small gray 5/5, an empty area for a quote, and below it a light-blue circular avatar plus an empty name line and an empty small gray line. Leave the quote, the avatar initials and the name completely blank for a real customer review to be added later.
 
@@ -483,7 +487,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 18 Pro nuevo y sellado"; "S/ 6,200"; "Contraentrega en Lima · Envíos a todo el Perú". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 18 Pro nuevo y sellado"; "S/ 6,200"; "Contraentrega en Lima · Envíos a todo el Perú"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -493,7 +497,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 18 Pro nuevo y sellado"; "S/ 6,200"; "Contraentrega en Lima · Envíos a todo el Perú". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 18 Pro nuevo y sellado"; "S/ 6,200"; "Contraentrega en Lima · Envíos a todo el Perú"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -563,7 +567,7 @@ Link: https://revoimport.com/p/iphone-17-pro-max/
 **Textos para Meta (súbelos como opciones múltiples del mismo anuncio)**
 
 - Texto principal 1: iPhone 17 Pro Max nuevo y sellado desde S/ 4,600. Pantalla de 6.9 pulgadas, en 256 GB, 512 GB o 1 TB.
-- Texto principal 2: Silver, Naranja o Azul, con eSIM o chip físico. Incluye 4 regalos y 1 año de garantía por fallas de fábrica.
+- Texto principal 2: Silver, Naranja o Azul, eSIM o chip físico. Incluye 4 regalos (sujetos a stock) y 1 año de garantía por fallas de fábrica.
 - Texto principal 3: Recibe un video de tu equipo antes de pagar. En Lima pagas al recibir; a provincia coordinamos el envío.
 - Títulos: iPhone 17 Pro Max desde S/ 4,600 · Nuevo, sellado y con 4 regalos · Video antes de pagar
 - Descripción: Consulta disponibilidad
@@ -623,7 +627,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/apple/iphone-17-pro-max/orange/1-orange.webp>, <https://revoimport.com/assets/revo/accessories/case-iphone.webp>, <https://revoimport.com/assets/revo/accessories/mica-iphone.webp>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: TU IPHONE 17 PRO MAX · VIENE ACOMPAÑADO · nuevo y sellado. · case, mica y cable de regalo. · video de tu equipo antes de pagar. · Desde S/ 4,600 · PIDE HOY
+Textos exactos en la imagen: TU IPHONE 17 PRO MAX · VIENE ACOMPAÑADO · nuevo y sellado. · case, mica y cable de regalo. · video de tu equipo antes de pagar. · Desde S/ 4,600 · PIDE HOY · Regalos sujetos a disponibilidad.
 
 **Prompt master 3:4 (Feed)**
 
@@ -635,6 +639,7 @@ Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Three small lowercase callout captions with thin white 1px leader lines pointing at the product: "nuevo y sellado." upper left, with a line going down to the phone; "case, mica y cable de regalo." upper right, with an L-shaped line pointing to the gifts; "video de tu equipo antes de pagar." lower center, with a vertical line from the phone.
 - Just above the button, centered: bold white price text "Desde S/ 4,600"
 - Bottom center: a white rounded-rectangle button with gray bold all-caps text "PIDE HOY"
+- Under the button, one line of small white text: "Regalos sujetos a disponibilidad."
 
 Clean layout, generous negative space, modern e-commerce ad aesthetic.
 
@@ -648,7 +653,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 17 PRO MAX"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "Desde S/ 4,600"; "PIDE HOY". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 17 PRO MAX"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "Desde S/ 4,600"; "PIDE HOY"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -658,7 +663,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 17 PRO MAX"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "Desde S/ 4,600"; "PIDE HOY". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 17 PRO MAX"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "Desde S/ 4,600"; "PIDE HOY"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -726,7 +731,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/apple/iphone-17-pro-max/orange/1-orange.webp>
 
-Textos exactos en la imagen: 4 regalos incluidos · iPhone 17 Pro Max nuevo y sellado · Desde S/ 4,600 · Contraentrega en Lima · Envíos a todo el Perú
+Textos exactos en la imagen: 4 regalos incluidos · iPhone 17 Pro Max nuevo y sellado · Desde S/ 4,600 · Contraentrega en Lima · Envíos a todo el Perú · Regalos sujetos a disponibilidad.
 
 > Lleva una tarjeta de reseña en blanco: complétala con una reseña real de un cliente (con su permiso) antes de publicar. No inventes reseñas ni estrellas.
 
@@ -743,6 +748,7 @@ Below the product, centered text block:
 - bold black sentence-case title "iPhone 17 Pro Max nuevo y sellado"
 - price line: "Desde S/ 4,600" in large bold dark navy blue
 - regular black text "Contraentrega en Lima · Envíos a todo el Perú"
+- one line of small gray text "Regalos sujetos a disponibilidad."
 
 Bottom: a white rounded-rectangle card with a thin black outline, laid out as a customer review template: a row of five orange-yellow stars with small gray 5/5, an empty area for a quote, and below it a light-blue circular avatar plus an empty name line and an empty small gray line. Leave the quote, the avatar initials and the name completely blank for a real customer review to be added later.
 
@@ -758,7 +764,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 17 Pro Max nuevo y sellado"; "Desde S/ 4,600"; "Contraentrega en Lima · Envíos a todo el Perú". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 17 Pro Max nuevo y sellado"; "Desde S/ 4,600"; "Contraentrega en Lima · Envíos a todo el Perú"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -768,7 +774,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 17 Pro Max nuevo y sellado"; "Desde S/ 4,600"; "Contraentrega en Lima · Envíos a todo el Perú". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 17 Pro Max nuevo y sellado"; "Desde S/ 4,600"; "Contraentrega en Lima · Envíos a todo el Perú"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -838,7 +844,7 @@ Link: https://revoimport.com/p/iphone-17-pro/
 **Textos para Meta (súbelos como opciones múltiples del mismo anuncio)**
 
 - Texto principal 1: iPhone 17 Pro nuevo y sellado desde S/ 4,190. Pantalla de 6.3 pulgadas y 256 GB.
-- Texto principal 2: Silver, Naranja o Azul, con eSIM o chip físico. Incluye 4 regalos y 1 año de garantía por fallas de fábrica.
+- Texto principal 2: Silver, Naranja o Azul, eSIM o chip físico. Incluye 4 regalos (sujetos a stock) y 1 año de garantía por fallas de fábrica.
 - Texto principal 3: Recibe un video de tu equipo antes de pagar. En Lima pagas al recibir; a provincia coordinamos el envío.
 - Títulos: iPhone 17 Pro desde S/ 4,190 · Nuevo, sellado y con 4 regalos · Video antes de pagar
 - Descripción: Consulta disponibilidad
@@ -898,7 +904,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/apple/iphone-17-pro/blue/blue1.webp>, <https://revoimport.com/assets/revo/accessories/case-iphone.webp>, <https://revoimport.com/assets/revo/accessories/mica-iphone.webp>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: TU IPHONE 17 PRO · VIENE ACOMPAÑADO · nuevo y sellado. · case, mica y cable de regalo. · video de tu equipo antes de pagar. · Desde S/ 4,190 · PIDE HOY
+Textos exactos en la imagen: TU IPHONE 17 PRO · VIENE ACOMPAÑADO · nuevo y sellado. · case, mica y cable de regalo. · video de tu equipo antes de pagar. · Desde S/ 4,190 · PIDE HOY · Regalos sujetos a disponibilidad.
 
 **Prompt master 3:4 (Feed)**
 
@@ -910,6 +916,7 @@ Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Three small lowercase callout captions with thin white 1px leader lines pointing at the product: "nuevo y sellado." upper left, with a line going down to the phone; "case, mica y cable de regalo." upper right, with an L-shaped line pointing to the gifts; "video de tu equipo antes de pagar." lower center, with a vertical line from the phone.
 - Just above the button, centered: bold white price text "Desde S/ 4,190"
 - Bottom center: a white rounded-rectangle button with gray bold all-caps text "PIDE HOY"
+- Under the button, one line of small white text: "Regalos sujetos a disponibilidad."
 
 Clean layout, generous negative space, modern e-commerce ad aesthetic.
 
@@ -923,7 +930,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 17 PRO"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "Desde S/ 4,190"; "PIDE HOY". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 17 PRO"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "Desde S/ 4,190"; "PIDE HOY"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -933,7 +940,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 17 PRO"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "Desde S/ 4,190"; "PIDE HOY". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 17 PRO"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "Desde S/ 4,190"; "PIDE HOY"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -1001,7 +1008,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/apple/iphone-17-pro/blue/blue1.webp>
 
-Textos exactos en la imagen: 4 regalos incluidos · iPhone 17 Pro nuevo y sellado · Desde S/ 4,190 · Contraentrega en Lima · Envíos a todo el Perú
+Textos exactos en la imagen: 4 regalos incluidos · iPhone 17 Pro nuevo y sellado · Desde S/ 4,190 · Contraentrega en Lima · Envíos a todo el Perú · Regalos sujetos a disponibilidad.
 
 > Lleva una tarjeta de reseña en blanco: complétala con una reseña real de un cliente (con su permiso) antes de publicar. No inventes reseñas ni estrellas.
 
@@ -1018,6 +1025,7 @@ Below the product, centered text block:
 - bold black sentence-case title "iPhone 17 Pro nuevo y sellado"
 - price line: "Desde S/ 4,190" in large bold dark navy blue
 - regular black text "Contraentrega en Lima · Envíos a todo el Perú"
+- one line of small gray text "Regalos sujetos a disponibilidad."
 
 Bottom: a white rounded-rectangle card with a thin black outline, laid out as a customer review template: a row of five orange-yellow stars with small gray 5/5, an empty area for a quote, and below it a light-blue circular avatar plus an empty name line and an empty small gray line. Leave the quote, the avatar initials and the name completely blank for a real customer review to be added later.
 
@@ -1033,7 +1041,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 17 Pro nuevo y sellado"; "Desde S/ 4,190"; "Contraentrega en Lima · Envíos a todo el Perú". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 17 Pro nuevo y sellado"; "Desde S/ 4,190"; "Contraentrega en Lima · Envíos a todo el Perú"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -1043,7 +1051,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 17 Pro nuevo y sellado"; "Desde S/ 4,190"; "Contraentrega en Lima · Envíos a todo el Perú". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 17 Pro nuevo y sellado"; "Desde S/ 4,190"; "Contraentrega en Lima · Envíos a todo el Perú"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -1113,7 +1121,7 @@ Link: https://revoimport.com/p/iphone-17/
 **Textos para Meta (súbelos como opciones múltiples del mismo anuncio)**
 
 - Texto principal 1: iPhone 17 nuevo y sellado desde S/ 3,200. 256 GB y pantalla de 6.3 pulgadas.
-- Texto principal 2: Lila, Azul, Negro, Verde o Blanco: tú eliges. Con 4 regalos y 1 año de garantía por fallas de fábrica.
+- Texto principal 2: Lila, Azul, Negro, Verde o Blanco: tú eliges. Con 4 regalos (sujetos a stock) y 1 año de garantía por fallas de fábrica.
 - Texto principal 3: Recibe un video de tu equipo antes de pagar. En Lima pagas al recibir; a provincia coordinamos el envío.
 - Títulos: iPhone 17 desde S/ 3,200 · 5 colores y 4 regalos · Video antes de pagar
 - Descripción: Consulta disponibilidad
@@ -1173,7 +1181,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/apple/iphone-17/lavender/lavender1.webp>, <https://revoimport.com/assets/revo/accessories/case-iphone.webp>, <https://revoimport.com/assets/revo/accessories/mica-iphone.webp>, <https://revoimport.com/assets/revo/accessories/cable-usbc-usbc.webp>
 
-Textos exactos en la imagen: TU IPHONE 17 · VIENE ACOMPAÑADO · nuevo y sellado. · case, mica y cable de regalo. · video de tu equipo antes de pagar. · Desde S/ 3,200 · PIDE HOY
+Textos exactos en la imagen: TU IPHONE 17 · VIENE ACOMPAÑADO · nuevo y sellado. · case, mica y cable de regalo. · video de tu equipo antes de pagar. · Desde S/ 3,200 · PIDE HOY · Regalos sujetos a disponibilidad.
 
 **Prompt master 3:4 (Feed)**
 
@@ -1185,6 +1193,7 @@ Typography overlay in clean bold white sans-serif (Helvetica / Neue Haas style):
 - Three small lowercase callout captions with thin white 1px leader lines pointing at the product: "nuevo y sellado." upper left, with a line going down to the phone; "case, mica y cable de regalo." upper right, with an L-shaped line pointing to the gifts; "video de tu equipo antes de pagar." lower center, with a vertical line from the phone.
 - Just above the button, centered: bold white price text "Desde S/ 3,200"
 - Bottom center: a white rounded-rectangle button with gray bold all-caps text "PIDE HOY"
+- Under the button, one line of small white text: "Regalos sujetos a disponibilidad."
 
 Clean layout, generous negative space, modern e-commerce ad aesthetic.
 
@@ -1198,7 +1207,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 17"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "Desde S/ 3,200"; "PIDE HOY". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 17"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "Desde S/ 3,200"; "PIDE HOY"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -1208,7 +1217,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 17"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "Desde S/ 3,200"; "PIDE HOY". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "TU IPHONE 17"; "VIENE ACOMPAÑADO"; "nuevo y sellado."; "case, mica y cable de regalo."; "video de tu equipo antes de pagar."; "Desde S/ 3,200"; "PIDE HOY"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 
@@ -1276,7 +1285,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 
 Referencias: <https://revoimport.com/assets/apple/iphone-17/lavender/lavender1.webp>
 
-Textos exactos en la imagen: 4 regalos incluidos · iPhone 17 nuevo y sellado · Desde S/ 3,200 · Contraentrega en Lima · Envíos a todo el Perú
+Textos exactos en la imagen: 4 regalos incluidos · iPhone 17 nuevo y sellado · Desde S/ 3,200 · Contraentrega en Lima · Envíos a todo el Perú · Regalos sujetos a disponibilidad.
 
 > Lleva una tarjeta de reseña en blanco: complétala con una reseña real de un cliente (con su permiso) antes de publicar. No inventes reseñas ni estrellas.
 
@@ -1293,6 +1302,7 @@ Below the product, centered text block:
 - bold black sentence-case title "iPhone 17 nuevo y sellado"
 - price line: "Desde S/ 3,200" in large bold dark navy blue
 - regular black text "Contraentrega en Lima · Envíos a todo el Perú"
+- one line of small gray text "Regalos sujetos a disponibilidad."
 
 Bottom: a white rounded-rectangle card with a thin black outline, laid out as a customer review template: a row of five orange-yellow stars with small gray 5/5, an empty area for a quote, and below it a light-blue circular avatar plus an empty name line and an empty small gray line. Leave the quote, the avatar initials and the name completely blank for a real customer review to be added later.
 
@@ -1308,7 +1318,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 1:1 (Feed)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 17 nuevo y sellado"; "Desde S/ 3,200"; "Contraentrega en Lima · Envíos a todo el Perú". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 17 nuevo y sellado"; "Desde S/ 3,200"; "Contraentrega en Lima · Envíos a todo el Perú"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: square 1:1 for Facebook and Instagram Feed. Rearrange elements instead of shrinking the text (for example product on one side and labels on the other); the headline stays on top and the button or review card stays at the bottom.
 
@@ -1318,7 +1328,7 @@ Brand-safety and text rules: do not show the Apple logo, the word AirPods or any
 **Redimensión 9:16 (Stories y Reels)** — usar el master generado como Image 1
 
 ```text
-Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 17 nuevo y sellado"; "Desde S/ 3,200"; "Contraentrega en Lima · Envíos a todo el Perú". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
+Resize and recompose the reference ad (Image 1, the approved 3:4 master) into a new creative. Keep the same product photography, product identity, colors, background, typography style and layout logic, and keep EXACTLY the same text strings: "4 regalos incluidos"; "iPhone 17 nuevo y sellado"; "Desde S/ 3,200"; "Contraentrega en Lima · Envíos a todo el Perú"; "Regalos sujetos a disponibilidad.". Do not add, remove, translate or rephrase any text. Adjust the layout so the text and the product stay fully visible: nothing cut by the frame edges, at least 6% margins on every side, text never overlapping the product.
 
 Format: vertical 9:16 for Instagram and Facebook Stories and Reels. Keep the top 14% and the bottom 35% of the canvas free of any text, price, label, badge, card or button; only plain background (or the extended scene surface) may continue there. Place the complete ad, headline, product, labels, price and button, inside the band between 14% and 65% of the height, scaled to fit.
 

@@ -30,6 +30,8 @@ IPHONE_USBC = "https://revoimport.com/assets/apple/iphone-17/sage/sage.webp"
 # Línea fija en la imagen de los combos Pro 3 (pedido del dueño). El aviso "compatibles, no originales de
 # Apple" va en el texto del anuncio (meta_texto_3), no en la imagen.
 CALIDAD_PRO3 = "Calidad Premium"
+# Los regalos del iPhone dependen de stock (catálogo: "disponibilidad a confirmar"): va donde se mencionen.
+REGALOS_NOTA = "Regalos sujetos a disponibilidad."
 
 # ---------------------------------------------------------------------------
 # Reglas comunes que se agregan a TODOS los prompts
@@ -274,7 +276,7 @@ def iphone_rows(pid, color_desc, bg2, bg5, btn5, t5_head, meta):
                    ("5", "on the screen protector", "Mica de regalo."),
                    ("6", "on the cable", "Cable compatible de regalo.")],
             price=precio, cta="PIDE HOY",
-            nota="+ Audífonos Pro 2 de regalo. Regalos sujetos a disponibilidad."),
+            nota=f"+ Audífonos Pro 2 de regalo. {REGALOS_NOTA}"),
     )
     rows["T2"] = dict(
         refs=[r_par, r_case, r_mica, r_cable],
@@ -285,7 +287,7 @@ def iphone_rows(pid, color_desc, bg2, bg5, btn5, t5_head, meta):
             captions=[("nuevo y sellado.", "upper left, with a line going down to the phone"),
                       ("case, mica y cable de regalo.", "upper right, with an L-shaped line pointing to the gifts"),
                       ("video de tu equipo antes de pagar.", "lower center, with a vertical line from the phone")],
-            price=precio, cta="PIDE HOY"),
+            price=precio, cta="PIDE HOY", nota=REGALOS_NOTA),
     )
     icons = []
     if p["pantalla"]:
@@ -316,7 +318,7 @@ def iphone_rows(pid, color_desc, bg2, bg5, btn5, t5_head, meta):
         refs=[r_par],
         prompt=t4(badge="4 regalos incluidos", hero=f"{vis}, in 3/4 rear view, standing upright",
                   title=f"{name} nuevo y sellado", price=precio,
-                  sub="Contraentrega en Lima · Envíos a todo el Perú"),
+                  sub="Contraentrega en Lima · Envíos a todo el Perú", nota=REGALOS_NOTA),
     )
     rows["T5"] = dict(
         refs=[r_par, r_case, r_mica, r_cable],
@@ -345,7 +347,7 @@ def build_products():
         "iphone-18-pro-max", "deep burgundy", "warm stone-gray", "dusty navy-blue / slate-blue", "navy",
         ("¿TOCA CAMBIAR", "DE IPHONE?"),
         dict(textos=["iPhone 18 Pro Max nuevo y sellado, 256 GB, a S/ 6,550. Te enviamos un video de tu equipo antes de pagar.",
-                     "Elige Guinda, Celeste, Silver o Negro. Viene con 4 regalos y 1 año de garantía por fallas de fábrica.",
+                     "Elige Guinda, Celeste, Silver o Negro. Viene con 4 regalos (sujetos a stock) y 1 año de garantía por fallas de fábrica.",
                      "En Lima pagas al recibir. A provincia también llegamos: coordinamos pago y envío por WhatsApp."],
              titulos=["iPhone 18 Pro Max a S/ 6,550", "Nuevo, sellado y con 4 regalos", "Pagas al recibir en Lima"],
              descripcion="Consulta disponibilidad"))
@@ -353,7 +355,7 @@ def build_products():
         "iphone-18-pro", "light sky blue", "soft sand-beige", "deep charcoal-gray", "charcoal",
         ("TU PRÓXIMO", "IPHONE ESTÁ AQUÍ"),
         dict(textos=["iPhone 18 Pro nuevo y sellado, 256 GB, a S/ 6,200. Te enviamos un video de tu equipo antes de pagar.",
-                     "Elige Celeste, Guinda, Silver o Negro. Viene con 4 regalos y 1 año de garantía por fallas de fábrica.",
+                     "Elige Celeste, Guinda, Silver o Negro. Viene con 4 regalos (sujetos a stock) y 1 año de garantía por fallas de fábrica.",
                      "En Lima pagas al recibir. A provincia también llegamos: coordinamos pago y envío por WhatsApp."],
              titulos=["iPhone 18 Pro a S/ 6,200", "Nuevo, sellado y con 4 regalos", "Pagas al recibir en Lima"],
              descripcion="Consulta disponibilidad"))
@@ -361,7 +363,7 @@ def build_products():
         "iphone-17-pro-max", "bright cosmic orange", "slate-gray / muted green-gray", "dusty navy-blue / slate-blue", "navy",
         ("¿BUSCAS UN", "PRO MAX?"),
         dict(textos=["iPhone 17 Pro Max nuevo y sellado desde S/ 4,600. Pantalla de 6.9 pulgadas, en 256 GB, 512 GB o 1 TB.",
-                     "Silver, Naranja o Azul, con eSIM o chip físico. Incluye 4 regalos y 1 año de garantía por fallas de fábrica.",
+                     "Silver, Naranja o Azul, eSIM o chip físico. Incluye 4 regalos (sujetos a stock) y 1 año de garantía por fallas de fábrica.",
                      META_IPHONE_3],
              titulos=["iPhone 17 Pro Max desde S/ 4,600", "Nuevo, sellado y con 4 regalos", "Video antes de pagar"],
              descripcion="Consulta disponibilidad"))
@@ -369,7 +371,7 @@ def build_products():
         "iphone-17-pro", "deep blue", "warm light-gray", "muted terracotta", "terracotta",
         ("¿LISTO PARA", "EL PRO?"),
         dict(textos=["iPhone 17 Pro nuevo y sellado desde S/ 4,190. Pantalla de 6.3 pulgadas y 256 GB.",
-                     "Silver, Naranja o Azul, con eSIM o chip físico. Incluye 4 regalos y 1 año de garantía por fallas de fábrica.",
+                     "Silver, Naranja o Azul, eSIM o chip físico. Incluye 4 regalos (sujetos a stock) y 1 año de garantía por fallas de fábrica.",
                      META_IPHONE_3],
              titulos=["iPhone 17 Pro desde S/ 4,190", "Nuevo, sellado y con 4 regalos", "Video antes de pagar"],
              descripcion="Consulta disponibilidad"))
@@ -377,7 +379,7 @@ def build_products():
         "iphone-17", "soft lavender", "pale sage-green", "dusty slate-blue", "slate-blue",
         ("TU PRÓXIMO IPHONE.", "CON TODA CONFIANZA."),
         dict(textos=["iPhone 17 nuevo y sellado desde S/ 3,200. 256 GB y pantalla de 6.3 pulgadas.",
-                     "Lila, Azul, Negro, Verde o Blanco: tú eliges. Con 4 regalos y 1 año de garantía por fallas de fábrica.",
+                     "Lila, Azul, Negro, Verde o Blanco: tú eliges. Con 4 regalos (sujetos a stock) y 1 año de garantía por fallas de fábrica.",
                      META_IPHONE_3],
              titulos=["iPhone 17 desde S/ 3,200", "5 colores y 4 regalos", "Video antes de pagar"],
              descripcion="Consulta disponibilidad"))

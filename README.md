@@ -20,7 +20,9 @@ revoimport.com ──► Claude (copy y prompts) ──► Google Sheet ──�
 | `brief/meta-ads-brief-revo.md` | El brief de Meta Ads completado con lo que dice tu web + investigación del comprador |
 | `n8n/revo-meta-ads-workflow.json` | Workflow para importar en n8n |
 | `n8n/code/` | Código de cada nodo (para revisarlo o cambiarlo) |
-| `scripts/` | Regeneran la biblioteca y el workflow |
+| `scripts/` | Regeneran la biblioteca y el workflow; `reels_safe.py` arma la versión Reels y `poner_resena.py` escribe una reseña real en la tarjeta T4 |
+| `resenas/` | Mensajes de WhatsApp para pedir reseñas y la tabla donde se anotan |
+| `docs/propuesta-banners-inteligentes.md` | Propuesta de banners con foto real y texto por código (prueba de 13 a 17 créditos) |
 
 ## Opción 1 · Usar los prompts directo en Higgsfield
 
@@ -69,6 +71,7 @@ o `error_claude`, con el detalle en `qa_problemas`. Para regenerar una fila, vue
   que tapa la interfaz de Reels.
 - Sube los 3 textos principales y los 3 títulos como opciones del mismo anuncio. Botón: *Enviar mensaje* (WhatsApp).
 - Las T4 llevan la tarjeta de reseña en blanco: complétala con una reseña real (con permiso del cliente) o no publiques esa versión.
+  Cómo pedirla y ponerla sin gastar créditos: `resenas/COMO-PEDIR-RESENAS.md` y `scripts/poner_resena.py`.
 - Revisa que el precio siga igual en la web.
 
 ## Cosas que debes confirmar o saber
