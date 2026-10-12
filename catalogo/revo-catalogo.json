@@ -20,7 +20,7 @@
       "Contraentrega en Lima; envíos a todo el Perú (costo a coordinar)"
     ],
     "combos_pro3": [
-      "Audífonos Pro 3 Calidad Premium, compatibles, NO originales de Apple (debe decirse siempre)",
+      "Audífonos Pro 3 Calidad Premium. No son de Apple: nunca decir ni insinuar que son originales de Apple ni usar AirPods o el logo de Apple (el dueño decidió no poner el aviso de compatibles en los anuncios)",
       "Envío gratis a Lima y provincia",
       "Case protector de regalo en el color que elijas (6 colores)",
       "COMBO PRO 3: antes S/ 144, ahora S/ 119; pagas al llegar a tu casa"
@@ -154,7 +154,7 @@
       "id": "combo-pro-3-a1", "huella_web": "76e09872", "categoria": "combos", "nombre": "COMBO PRO 3",
       "precio": "S/ 119", "precio_num": 119, "precio_antes": "S/ 144",
       "incluye": ["1 Pro 3 Calidad Premium", "1 cable USB-C a USB-C", "1 case de regalo"],
-      "datos": ["envío gratis a Lima y provincia", "pagas al llegar a tu casa", "6 colores de case", "audífonos compatibles, no originales de Apple"],
+      "datos": ["envío gratis a Lima y provincia", "pagas al llegar a tu casa", "6 colores de case", "audífonos Pro 3 Calidad Premium"],
       "link": "https://revoimport.com/p/combo-pro-3-a1/",
       "refs": {"audifonos": "https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp",
                "cases": "https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png",
@@ -164,7 +164,7 @@
       "id": "combo-pro-3-4en1", "huella_web": "0c3f2c0b", "categoria": "combos", "nombre": "COMBO PRO 3 · 4 en 1",
       "precio": "S/ 219", "precio_num": 219, "precio_antes": null,
       "incluye": ["1 Pro 3 Calidad Premium con cable en caja", "1 cubo original de 20 W", "1 cable a elección (USB-C o Lightning)", "1 case de regalo"],
-      "datos": ["envío gratis a Lima y provincia", "6 colores de case", "audífonos compatibles, no originales de Apple"],
+      "datos": ["envío gratis a Lima y provincia", "6 colores de case", "audífonos Pro 3 Calidad Premium"],
       "link": "https://revoimport.com/p/combo-pro-3-4en1/",
       "refs": {"audifonos": "https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp",
                "cases": "https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png",
@@ -175,7 +175,7 @@
       "id": "combo-pro-3-2x1", "huella_web": "87c6334d", "categoria": "combos", "nombre": "COMBO PRO 3 · 2×1",
       "precio": "S/ 199", "precio_num": 199, "precio_antes": null,
       "incluye": ["2 Pro 3 Calidad Premium, cada uno con cable en su caja", "2 cases de regalo, uno por unidad"],
-      "datos": ["envío gratis a Lima y provincia", "eliges un color de case para cada uno", "audífonos compatibles, no originales de Apple"],
+      "datos": ["envío gratis a Lima y provincia", "eliges un color de case para cada uno", "audífonos Pro 3 Calidad Premium"],
       "link": "https://revoimport.com/p/combo-pro-3-2x1/",
       "refs": {"audifonos": "https://revoimport.com/assets/revo/cutouts/01-pro3-en-caja.webp",
                "cases": "https://revoimport.com/assets/revo/guia-colores-pro3-3x2.png"}

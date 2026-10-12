@@ -58,7 +58,8 @@ entorno, así que no analicé anuncios de la competencia). Tómalo como hipótes
   reforzaría la confianza que piden los anuncios.
 
 **Grupo 2: accesorios y combos (ticket bajo).** Deciden rápido por precio, envío gratis y pagar al
-recibir. Riesgo: los audífonos son compatibles, no originales; el anuncio debe decirlo claramente.
+recibir. Riesgo: los audífonos no son de Apple. Por decisión del dueño el anuncio no lleva el aviso de
+"compatibles"; por eso nunca se usa "AirPods", "originales" ni el logo de Apple.
 
 **Grupo 3: dueños de un iPhone usado que quieren cambiar.** Les interesa "Renueva tu iPhone"; lo que
 frena es no saber cuánto les reconocerán. El anuncio no promete montos, explica la evaluación.

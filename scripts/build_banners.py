@@ -27,8 +27,8 @@ CUBO_20W = "https://revoimport.com/assets/revo/accessories/cargador-20w.png"
 IPHONE_LIGHTNING = "https://revoimport.com/assets/revo/iphone-13-blanco-sin-fondo.png"
 IPHONE_USBC = "https://revoimport.com/assets/apple/iphone-17/sage/sage.webp"
 
-# Línea fija en la imagen de los combos Pro 3 (pedido del dueño). El aviso "compatibles, no originales de
-# Apple" va en el texto del anuncio (meta_texto_3), no en la imagen.
+# Línea fija en la imagen de los combos Pro 3. Por decisión del dueño, ni la imagen ni el texto del anuncio
+# llevan el aviso "compatibles, no originales de Apple"; sigue prohibido decir o insinuar que son de Apple.
 CALIDAD_PRO3 = "Calidad Premium"
 # Los regalos del iPhone dependen de stock (catálogo: "disponibilidad a confirmar"): va donde se mencionen.
 REGALOS_NOTA = "Regalos sujetos a disponibilidad."
@@ -681,7 +681,7 @@ def build_products():
             contrast="the white earbuds and pastel cases contrasting with the blue background")),
     }, dict(textos=["Combo Pro 3 a S/ 119 (antes S/ 144): audífonos Calidad Premium + cable USB-C + case de regalo.",
                     "Envío gratis a Lima y provincia, y pagas al llegar a tu casa. Elige tu case entre 6 colores.",
-                    "Audífonos Pro 3 Calidad Premium compatibles, no originales de Apple. Pídelo por WhatsApp."],
+                    "Audífonos Pro 3 Calidad Premium. Pídelo por WhatsApp."],
             titulos=["Combo Pro 3 a S/ 119", "Envío gratis a todo el Perú", "Case de regalo en 6 colores"],
             descripcion="Pagas al recibir"))
 
@@ -727,7 +727,7 @@ def build_products():
             cta="PIDE HOY", under="ENVÍO GRATIS A TODO EL PERÚ", btn_color="terracotta", nota=CALIDAD_PRO3)),
     }, dict(textos=["Combo 4 en 1 a S/ 219: Pro 3 Calidad Premium, cubo original de 20 W, cable a elección y case de regalo.",
                     "Envío gratis a Lima y provincia. Eliges cable USB-C a USB-C o a Lightning y el color de tu case.",
-                    "Audífonos Pro 3 Calidad Premium compatibles, no originales de Apple. Pídelo por WhatsApp."],
+                    "Audífonos Pro 3 Calidad Premium. Pídelo por WhatsApp."],
             titulos=["Combo 4 en 1 a S/ 219", "Con cubo original de 20 W", "Envío gratis a todo el Perú"],
             descripcion="Case de regalo"))
 
@@ -771,7 +771,7 @@ def build_products():
             cta="PIDE HOY", under="ENVÍO GRATIS A TODO EL PERÚ", btn_color="plum", nota=CALIDAD_PRO3)),
     }, dict(textos=["Combo 2×1 a S/ 199: dos Pro 3 Calidad Premium, cada uno con su cable y su case de regalo.",
                     "Uno para ti y otro para compartir. Elige un color de case para cada uno. Envío gratis a todo el Perú.",
-                    "Audífonos Pro 3 Calidad Premium compatibles, no originales de Apple. Pídelo por WhatsApp."],
+                    "Audífonos Pro 3 Calidad Premium. Pídelo por WhatsApp."],
             titulos=["Combo 2×1 a S/ 199", "Dos cases de regalo", "Envío gratis a todo el Perú"],
             descripcion="Elige tus colores"))
 

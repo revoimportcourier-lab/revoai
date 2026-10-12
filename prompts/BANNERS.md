@@ -3062,7 +3062,7 @@ Link: https://revoimport.com/p/combo-pro-3-a1/
 
 - Texto principal 1: Combo Pro 3 a S/ 119 (antes S/ 144): audífonos Calidad Premium + cable USB-C + case de regalo.
 - Texto principal 2: Envío gratis a Lima y provincia, y pagas al llegar a tu casa. Elige tu case entre 6 colores.
-- Texto principal 3: Audífonos Pro 3 Calidad Premium compatibles, no originales de Apple. Pídelo por WhatsApp.
+- Texto principal 3: Audífonos Pro 3 Calidad Premium. Pídelo por WhatsApp.
 - Títulos: Combo Pro 3 a S/ 119 · Envío gratis a todo el Perú · Case de regalo en 6 colores
 - Descripción: Pagas al recibir
 - Botón: Enviar mensaje
@@ -3340,7 +3340,7 @@ Link: https://revoimport.com/p/combo-pro-3-4en1/
 
 - Texto principal 1: Combo 4 en 1 a S/ 219: Pro 3 Calidad Premium, cubo original de 20 W, cable a elección y case de regalo.
 - Texto principal 2: Envío gratis a Lima y provincia. Eliges cable USB-C a USB-C o a Lightning y el color de tu case.
-- Texto principal 3: Audífonos Pro 3 Calidad Premium compatibles, no originales de Apple. Pídelo por WhatsApp.
+- Texto principal 3: Audífonos Pro 3 Calidad Premium. Pídelo por WhatsApp.
 - Títulos: Combo 4 en 1 a S/ 219 · Con cubo original de 20 W · Envío gratis a todo el Perú
 - Descripción: Case de regalo
 - Botón: Enviar mensaje
@@ -3619,7 +3619,7 @@ Link: https://revoimport.com/p/combo-pro-3-2x1/
 
 - Texto principal 1: Combo 2×1 a S/ 199: dos Pro 3 Calidad Premium, cada uno con su cable y su case de regalo.
 - Texto principal 2: Uno para ti y otro para compartir. Elige un color de case para cada uno. Envío gratis a todo el Perú.
-- Texto principal 3: Audífonos Pro 3 Calidad Premium compatibles, no originales de Apple. Pídelo por WhatsApp.
+- Texto principal 3: Audífonos Pro 3 Calidad Premium. Pídelo por WhatsApp.
 - Títulos: Combo 2×1 a S/ 199 · Dos cases de regalo · Envío gratis a todo el Perú
 - Descripción: Elige tus colores
 - Botón: Enviar mensaje
